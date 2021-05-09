@@ -1,0 +1,236 @@
+\chapter{Gestión del proyecto}
+
+En este capítulo se describe la gestión del proyecto: ciclo de vida, planificación, presupuesto, etc.
+
+\section{Fases del proyecto}
+
+Explicación de las fases del proyecto: definición, análisis, diseño, construcción, pruebas, implementación, validación, documentación. Ejemplo: diagrama de Pert.
+
+\section{Metodología}
+\subsection{Plan de trabajo}
+
+\begin{itemize}
+\item \textbf{T1. Fase de recursos}
+	\begin{itemize}
+	\item Obtención del software ETS5.
+	\item Obtención del software Gira Project Assistant.
+	\item Obtención de las especificaciones del proyecto.
+	\item Obtención de bibliografía. \\
+	\end{itemize} 
+\item \textbf{T2. Análisis teórico previo}
+	\begin{itemize}
+	\item Estudio viabilidad y especificaciones del proyecto.
+	\item Diseño de la solución.
+	\item Ajustes y mediación con el cliente sobre las nuevas características o modificaciones del sistema.
+	\item Elaboración del presupuesto.
+	\item Elección y pedido del hardware en base a especificaciones finales. \\
+	\end{itemize} 
+\item \textbf{T3. Implementación en ETS5}
+	\begin{itemize}
+	\item Desarrollo de la arquitectura de la vivienda en el proyecto.
+	\item Elaboración de los grupos de direcciones.
+	\item Búsqueda y descarga de las bases de datos de los productos.
+	\item Añadir los módulos de los dispositivos del sistema domótico.
+	\item Asignar direcciones físicas a los dispositivos. \\
+	\end{itemize} 
+\item \textbf{T4. Análisis de desarrollo}
+	\begin{itemize}
+	\item Programación de parámetros de los dispositivos.
+	\item Linkado de los objetos de comunicación de los dispositivos.
+	\item Creación de escenas.
+	\item Programación de módulos lógicos.
+	\item Volcado de programación sobre los dispositivos físicos.
+	\item Instalación de los dispositivos físicos en la vivienda. \\
+	\end{itemize} 
+\item \textbf{T5. Desarrollo sistema visualización}
+	\begin{itemize}
+	\item Creación servidor control remoto.
+	\item Diseño y creación de las pantallas de visualización.
+	\item Volcado sobre dispositivos físicos. \\
+	\end{itemize} 
+\item \textbf{T6. Validación y puesta en marcha del sistema}
+	\begin{itemize}
+	\item Comprobación instalación eléctrica y cableado.
+	\item Testeo funcionalidades del sistema.
+	\item Depuración de errores e implementación de mejoras. \\
+	\end{itemize} 
+\item \textbf{T7. Redacción de la memoria final} \\
+\end{itemize} 
+
+\subsection{Diagrama de Gantt}
+
+\begin{table}[h]
+\begin{ganttchart}[
+canvas/.append style={fill=none, draw=black!5, line width=.75pt},
+hgrid style/.style={draw=black!5, line width=1pt},
+vgrid={*1{draw=black!5, line width=.75pt}},
+x unit=1.2 cm,
+y unit title=1 cm,
+y unit chart=1 cm,
+today label font=\small\bfseries,
+title/.style={draw=none, fill=none},
+title label font=\bfseries\footnotesize,
+title label node/.append style={below=7pt},
+include title in canvas=false,
+bar label font=\mdseries\small\color{black!70},
+bar label node/.append style={left=2cm},
+bar/.append style={draw=none, fill=black!63},
+bar incomplete/.append style={fill=green},
+bar progress label font=\mdseries\footnotesize\color{black!70},
+group incomplete/.append style={fill=blue},
+group left shift=0,
+group right shift=0,
+group height=.5,
+group peaks tip position=0,
+group label node/.append style={left=.6cm},
+group progress label font=\bfseries\small,
+link/.style={-latex, line width=1.5pt, linkred},
+link label font=\scriptsize\bfseries,
+link label node/.append style={below left=-2pt and 0pt},
+]{1}{10}
+\gantttitle{Diagrama de Gantt}{10} \\[grid]
+\gantttitle{Abril}{4}
+\gantttitle{Mayo}{4}
+\gantttitle{Junio}{2}\\
+\gantttitle[title label node/.append style={below left=7pt and -3pt}]{Semana:\quad1}{1}
+\gantttitlelist{2,...,10}{1} \\
+\ganttbar[]{\textbf{T1}}{1}{1} \\
+\ganttbar[]{\textbf{T2}}{2}{4} \\
+\ganttbar[]{\textbf{T3}}{4}{4} \\
+\ganttbar[]{\textbf{T4}}{5}{6} \\
+\ganttbar[]{\textbf{T5}}{6}{6} \\
+\ganttbar[]{\textbf{T6}}{7}{8} \\
+\ganttbar[]{\textbf{T7}}{9}{10}
+\end{ganttchart}
+\caption{Diagrama de Gantt}
+\label{tab:diagrama_gantt}
+\end{table}
+
+
+
+\section{Budget}
+
+\subsection{Personal}
+
+\subsection{Material}
+
+\subsection{Presupuesto}
+
+En esta sección se realizará un recuento del precio y las unidades de los mecanismos adquiridos e instalados en la vivienda. Pese a que, tanto el beneficio económico como el tiempo de programación se vean perjudicados al adquirir los mecanismos a diferentes proveedores, es necesario la conjugación de varios de ellos para lograr cumplir con las expectativas del cliente en cuanto al alcance de la instalación. Por tanto, se detallará también la empresa que proporcioná los módulos:
+
+
+\begin{flushleft}
+\begin{table}[h]
+\begin{tabular}{|c|p{6cm}|c|c|c|c|}
+\hline 
+\rule[0mm]{0mm}{4mm}
+\multirow{2}{*}{Referencia} &  \multirow{2}{*}{Descripción} & \multirow{2}{*}{ Fabricante} &  \multirow{2}{*}{Cantidad} & Precio  & Precio \\
+&  &  &  &  Unitario &  Total\\
+\hline
+\hline
+\rule[0mm]{0mm}{4mm}
+18327 & Base de enchufe 16A/250V & Gira &  & 6,44 & 0\\
+\hline
+\rule[0mm]{0mm}{4mm}
+25227 & Juego de juntas para base de enchufe & Gira & 0 & 2,8 & 0\\
+\hline
+\rule[0mm]{0mm}{4mm}
+245200 & ? & Gira &  &  & 0\\
+\hline
+\rule[0mm]{0mm}{4mm}
+27027 & ? & Gira &  &  & 0\\
+\hline
+\rule[0mm]{0mm}{4mm}
+ \multirow{2}{*}{205127} & Detect. Movimiento KNX Komfort 2,2m &  \multirow{2}{*}{Gira} &  \multirow{2}{*}{4} &  \multirow{2}{*}{169,67} &  \multirow{2}{*}{678,68}\\
+\hline
+\rule[0mm]{0mm}{4mm}
+200800 & Acoplador de bus KNX & Gira & 6 & 51,29 & 307,74\\
+\hline
+\rule[0mm]{0mm}{4mm}
+222500 & Detect. Presencia KNX Mini Komfort & Gira & 1 & 231,86 & 231,86\\
+\hline
+\rule[0mm]{0mm}{4mm}
+ \multirow{2}{*}{204127} & Detect. Movimiento KNX Standard 2,2m &  \multirow{2}{*}{Gira} &  \multirow{2}{*}{1} &  \multirow{2}{*}{118,67} &  \multirow{2}{*}{118,67}\\
+\hline
+\rule[0mm]{0mm}{4mm}
+\rule[0mm]{0mm}{4mm}
+210427 & Sensor CO2 + Humedad KNX & Gira & 1 & 336,58 & 336,58\\
+\hline
+\rule[0mm]{0mm}{4mm}
+ \multirow{2}{*}{18200} & Acoplador de bus de pulsador KNX de 2 elementos con mando de 1 punto &  \multirow{2}{*}{Gira} &  \multirow{2}{*}{37} &  \multirow{2}{*}{79,22} &  \multirow{2}{*}{2931,14}\\
+\hline
+\rule[0mm]{0mm}{4mm}
+29527 & Teclas basculantes & Gira & 35 & 4,85 & 169,75\\
+\hline
+\rule[0mm]{0mm}{4mm}
+29427 & Teclas basculantes serigrafiadas con flecha & Gira & 2 & 6,66 & 13,32\\
+\hline
+\rule[0mm]{0mm}{4mm}
+213000 & Fuente alimentacion 640mA KNX & Gira & 1 & 323,37 & 323,37\\
+\hline
+\rule[0mm]{0mm}{4mm}
+ \multirow{2}{*}{504000} & Actuador de conmutación 24 salidas / 12 persianas KNX 16A &  \multirow{2}{*}{Gira} &  \multirow{2}{*}{2} &  \multirow{2}{*}{772,8} &  \multirow{2}{*}{1545,6}\\
+\hline
+\rule[0mm]{0mm}{4mm}
+212900 & Actuador calefaccion 6 elementos KNX & Gira & 2 & 231,83 & 463,66\\
+\hline
+\rule[0mm]{0mm}{4mm}
+ \multirow{2}{*}{212600} & Entrada binaria KNX de 6 elementos 10-230 V CA/CC &  \multirow{2}{*}{Gira} &  \multirow{2}{*}{4} &  \multirow{2}{*}{230,98} &  \multirow{2}{*}{923,92}\\
+\hline
+\rule[0mm]{0mm}{4mm}
+ & Detector de humos & Gira &  &  & 0\\
+\hline
+\rule[0mm]{0mm}{4mm}
+234300 & Módulo KNX para detector de humo & Gira & 4 & 115,57 & 462,28\\
+\hline
+\rule[0mm]{0mm}{4mm}
+209600 & Gira X1 & Gira & 1 & 835,58 & 835,58\\
+\hline
+\rule[0mm]{0mm}{4mm}
+206912 & Gira G1 & Gira & 1 & 1000,61 & 1000,61\\
+\hline
+\rule[0mm]{0mm}{4mm}
+21122 & Marco cubierta 1 elemento & Gira &  & 3,3 & 0\\
+\hline
+\rule[0mm]{0mm}{4mm}
+21222 & Marco cubierta 2 elemento & Gira &  & 4,54 & 0\\
+\hline
+\rule[0mm]{0mm}{4mm}
+21322 & Marco cubierta 3 elemento & Gira &  & 8,3 & 0\\
+\hline
+\rule[0mm]{0mm}{4mm}
+21422 & Marco cubierta 4 elemento & Gira &  & 13,4 & 0\\
+\hline
+\rule[0mm]{0mm}{4mm}
+40000 & ? & Gira &  &  & 0\\
+\hline
+\rule[0mm]{0mm}{4mm}
+27427 & ? & Gira &  &  & 0\\
+\hline
+\rule[0mm]{0mm}{4mm}
+ \multirow{2}{*}{202500} & Actuador de regulacion KNX 4 elementos Komfort &  \multirow{2}{*}{Gira} &  \multirow{2}{*}{4} &  \multirow{2}{*}{529,2} &  \multirow{2}{*}{2116,8}\\
+\hline
+\rule[0mm]{0mm}{4mm}
+ \multirow{2}{*}{KCI 4 S0} & Interfaz KNX para Contadores de Consumo & \multirow{2}{*}{ Zennio} &  \multirow{2}{*}{2} &  \multirow{2}{*}{83,3} &  \multirow{2}{*}{166,6}\\
+\hline
+\rule[0mm]{0mm}{4mm}
+ZVI-F55D & Panel táctil capacitivo con display & Zennio & 6 & 116,2 & 697,2\\
+\hline
+\rule[0mm]{0mm}{4mm}
+\multirow{2}{*}{ZCL-ZB4} & Actuador de climatización con zonificación por conductos de hasta 4 zonas & \multirow{2}{*}{Zennio} &\multirow{2}{*}{2} & \multirow{2}{*}{125,3} & \multirow{2}{*}{250,6}\\
+\hline
+\rule[0mm]{0mm}{4mm}
+\multirow{2}{*}{ZIO-KESP} & Medidor de energía eléctrica KNX KES Plus & \multirow{2}{*}{Zennio} & \multirow{2}{*}{2} & \multirow{2}{*}{104,3} & \multirow{2}{*}{ 208,6}\\
+\hline
+\rule[0mm]{0mm}{4mm}
+ZN1AC-CST120 & Transformador de corriente & Zennio & 6 & 16,8 & 100,8\\
+\hline
+\hline
+\rule[0mm]{0mm}{4mm}
+ & & & &TOTAL&12.459,56€\\
+\hline
+\end{tabular}
+\caption{Presupuesto}
+\label{tab:tabla_presupuesto}
+\end{table}
+\end{flushleft}

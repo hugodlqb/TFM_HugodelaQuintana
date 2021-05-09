@@ -1,0 +1,127 @@
+% Plantilla realizada por Alberto Brunete (UPM).
+
+%Parametros de tipo libro
+\documentclass[10pt,a4paper]{book}
+
+%Idioma español y acentos
+%\usepackage[spanish, es-tabla]{babel}
+%\usepackage[latin1]{inputenc}
+\usepackage[utf8]{inputenc}
+
+%algunos sÌmbolos matemáticos y paquetes para usar subimágenes
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{graphicx}
+\usepackage{subfigure}
+\usepackage{listings}
+\usepackage{appendix}
+\usepackage{array}
+\usepackage{multirow} 
+\usepackage{pgfgantt}
+\usepackage{xcolor}
+%Márgenes
+\usepackage[left=3cm,top=3cm,right=3cm,bottom=3cm]{geometry}
+
+%
+\usepackage{multicol}
+
+%para generar índice con hipervínculos
+\usepackage{hyperref}
+
+%parametros del documento (sus propiedades)
+\hypersetup{
+    pdftitle={Hugo de la Quintana Béjar - TFM - 2021},
+    pdfsubject={TFM - 2021},
+    pdfauthor={Hugo de la Quintana Béjar},
+    pdfkeywords={Domótica} {palabraclave2} {palabraclave3},
+    colorlinks,
+    citecolor=black,
+    filecolor=black,
+    linkcolor=black,
+    urlcolor=black,
+}
+
+%Código
+\usepackage{listings}
+%Rename Listlings
+\renewcommand{\lstlistingname}{Código}% Listing -> Algorithm
+\renewcommand{\lstlistlistingname}{Lista de \lstlistingname s}
+% List of Listings -> Lista de Código
+
+%empieza el documento
+\begin{document}  
+
+%elementos antes del trabajo en sÌ se meten dentro de frontmatter
+\frontmatter
+
+%cada incluye referencia a un archivo de tipo .tex
+\include{chapters/portada}
+
+\include{chapters/firmas}
+
+%Licencia opcional
+\include{chapters/licencia}
+
+\include{chapters/evaluacion}
+
+\include{chapters/agradecimientos}
+
+\include{chapters/abstract}
+
+%genera índice
+\tableofcontents
+\addcontentsline{toc}{chapter}{Índice}
+
+%Índice de figuras.
+\listoffigures
+
+%Índice de tablas.
+\listoftables
+
+%Empieza la parte descriptiva del trabajo
+\mainmatter
+
+\include{chapters/introduction}
+  
+  %partes finales del trabajo: conclusiones, bibliografia y anexos
+
+\include{chapters/theoricbackground}
+  
+\include{chapters/stateart}
+
+\include{chapters/howtowritelatex}
+
+\include{chapters/diseño}
+
+\include{chapters/desarrollo}
+
+\include{chapters/results}
+
+\include{chapters/management}
+
+\include{chapters/conclusion}
+
+\include{chapters/anexo}
+
+\appendix
+
+\include{chapters/appendix}
+
+\backmatter
+%Glosario, lista de símbolos, notas, etc.
+
+%estilo de bibliografía: plana, alfa...
+\bibliographystyle{plain}
+
+%genera doble hoja en blanco
+\cleardoublepage
+
+%apartado de bibliografía
+\addcontentsline{toc}{chapter}{Bibliography}
+
+%se incluye la bibliografía. Archivo de tipo .bib (bibtex)
+\bibliography{bibliography/bibliografia}
+
+%fin del documento
+\end{document}

@@ -1,0 +1,60 @@
+This is BibTeX, Version 0.99d (TeX Live 2015)
+Capacity: max_strings=35307, hash_size=35307, hash_prime=30011
+The top-level auxiliary file: TFG.aux
+A level-1 auxiliary file: chapters/portada.aux
+A level-1 auxiliary file: chapters/firmas.aux
+A level-1 auxiliary file: chapters/licencia.aux
+A level-1 auxiliary file: chapters/evaluacion.aux
+A level-1 auxiliary file: chapters/agradecimientos.aux
+A level-1 auxiliary file: chapters/resumen.aux
+A level-1 auxiliary file: chapters/introduccion.aux
+A level-1 auxiliary file: chapters/marcoteorico.aux
+A level-1 auxiliary file: chapters/estadoarte.aux
+A level-1 auxiliary file: chapters/ejemplos.aux
+A level-1 auxiliary file: chapters/resultados.aux
+A level-1 auxiliary file: chapters/gestion.aux
+A level-1 auxiliary file: chapters/conclusion.aux
+A level-1 auxiliary file: chapters/apendice.aux
+The style file: plain.bst
+Database file #1: bibliography/bibliografia.bib
+You've used 1 entry,
+            2118 wiz_defined-function locations,
+            519 strings with 4518 characters,
+and the built_in function-call counts, 392 in all, are:
+= -- 36
+> -- 18
+< -- 0
++ -- 7
+- -- 6
+* -- 34
+:= -- 71
+add.period$ -- 3
+call.type$ -- 1
+change.case$ -- 6
+chr.to.int$ -- 0
+cite$ -- 1
+duplicate$ -- 11
+empty$ -- 30
+format.name$ -- 6
+if$ -- 78
+int.to.chr$ -- 0
+int.to.str$ -- 1
+missing$ -- 1
+newline$ -- 8
+num.names$ -- 2
+pop$ -- 4
+preamble$ -- 1
+purify$ -- 5
+quote$ -- 0
+skip$ -- 7
+stack$ -- 0
+substring$ -- 32
+swap$ -- 1
+text.length$ -- 0
+text.prefix$ -- 0
+top$ -- 0
+type$ -- 4
+warning$ -- 0
+while$ -- 3
+width$ -- 2
+write$ -- 13
