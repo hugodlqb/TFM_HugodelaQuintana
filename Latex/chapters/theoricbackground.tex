@@ -18,7 +18,7 @@ knx, protocolos, teoria clase...)
 
 A continuación, se detalla una lista con los múltiples dispositivos y módulos domóticos que han sido utilizados para desarrollar la solución final diseñada y la funcionalidad que les ha sido otorgada. En esta lista únicamente aparecerán los elementos incluidos en el cuadro eléctrico de domótica y los mecanismos domóticos de la instalación, quedando excluidos, por tanto, los efectores y actuadores puramente eléctricos así como su cuadro, por no encontrarse dentro de las competencias de diseño del sistema.
 
-\subsection{\textbf{Actuadores:}} Estos elementos se encargan de ejecutar las acciones solicitadas desde el controlador sobre los diferentes elementos domóticos de la vivienda a los que se encuentra conectado. Existen diversas clases de actuadores que se clasifican en función de la aplicación que vayan a desarrollar. En este proyecto se utilizarán los siguientes:
+\subsection{Actuadores} Estos elementos se encargan de ejecutar las acciones solicitadas desde el controlador sobre los diferentes elementos domóticos de la vivienda a los que se encuentra conectado. Existen diversas clases de actuadores que se clasifican en función de la aplicación que vayan a desarrollar. En este proyecto se utilizarán los siguientes:
 
 \begin{itemize}
 \item \textbf{Dimmers:} 
@@ -75,7 +75,7 @@ A continuación, se detalla una lista con los múltiples dispositivos y módulos
 	\end{itemize} 
 \end{itemize} 
 
-\subsection{\textbf{Sensores}}
+\subsection{Sensores}
 
 \begin{itemize}
 \item \textbf{CO\textsubscript{2}:} 
@@ -158,7 +158,7 @@ A continuación, se detalla una lista con los múltiples dispositivos y módulos
 	\end{itemize} 
 \end{itemize} 
 
-\subsection{\textbf{Lectores de consumo}}
+\subsection{Lectores de consumo}
 
 \begin{itemize}
 \item \textbf{Electricidad:} 
@@ -188,7 +188,7 @@ A continuación, se detalla una lista con los múltiples dispositivos y módulos
 	\end{itemize} 
 \end{itemize} 
 
-\subsection{\textbf{Interfaces del usuario}}
+\subsection{Interfaces del usuario}
 
 \begin{itemize}
 \item \textbf{Pulsadores domóticos:} 
@@ -211,7 +211,7 @@ A continuación, se detalla una lista con los múltiples dispositivos y módulos
 	\item \underline{Funcionalidad:} se utilizará su función de termostato para gestionar el sistema de climatización. Desde estos dispositivos se efectuarán las llamadas de demanda tanto al sistema de suelo radiante como a los fancoils, en función de las temperaturas sensadas en cada habitación mediante el uso de una de sus entradas como sonda de temperatura. Uno de los termostatos llevará en su segunda canal de entrada una sonda térmica utilizada para conocer la temperatura exterior a la vivienda. Además, sus botones serán utilizados para las siguientes funciones:
 		\begin{itemize}
 		\item Los botones en el cuadrante inferior serán utilizados para subir y bajar la temperatura de consigna de la zona en la que se encuentra el termostato.
-		\item El botón en el cuadrante superior derecho tendrá la funcionalidad de variar el flujo de aire cedido por los equipos de aire acondicionado. Al ser un único botón, la secuencia que efectuará será cíclica siguiente patrón: +, ++, +++, A, +. ++, +++, A, … Siendo A la ejecución del modo automático, que seleccionará la velocidad de los ventiladores en función de la demanda y la ponderación otorgada a cada zona o habitación.
+		\item El botón en el cuadrante superior derecho tendrá la funcionalidad de variar el flujo de aire cedido por los equipos de aire acondicionado. Al ser un único botón, la secuencia que efectuará será cíclica con el siguiente patrón: +, ++, +++, A, +. ++, +++, A, … Siendo A la ejecución del modo automático, que seleccionará la velocidad de los ventiladores en función de la demanda y la ponderación otorgada a cada zona o habitación.
 		\item El botón en el cuadrante superior izquierdo servirá para cerrar la rejilla de esa habitación, evitando así el paso del aire de los fancoils.
 		\end{itemize} 
 	\begin{figure}[h]
@@ -236,7 +236,7 @@ A continuación, se detalla una lista con los múltiples dispositivos y módulos
 	\end{itemize} 
 \end{itemize} 
 
-\subsection{\textbf{Módulos de entradas}}
+\subsection{Módulos de entradas}
 
 \begin{itemize}
 \item \textbf{Para sensores de apertura:} 
@@ -253,12 +253,12 @@ A continuación, se detalla una lista con los múltiples dispositivos y módulos
 	\end{itemize} 
 \end{itemize} 
 
-\subsection{\textbf{Pasarelas}}
+\subsection{Pasarelas}
 
 \begin{itemize}
 \item \textbf{Para sistema de aerotermia:} 
 	\begin{itemize}
-	\item\underline{Descripción:} pasarela Daikin –KNX.
+	\item\underline{Descripción:} pasarela Daikin – KNX.
 	\item \underline{Características:} permite la comunicación bidireccional entre los sistemas Daikin VRV y las instalaciones KNX. 
 	\item \underline{Funcionalidad:} su principal misión será la de servir de puente de comunicación entre el sistema propio de los sistemas de fancoil de la vivienda y el sistema domótico KNX, permitiendo así su control a través del bus mediante el envío de telegramas y su decodificación.
 	\begin{figure}[h]
@@ -270,7 +270,7 @@ A continuación, se detalla una lista con los múltiples dispositivos y módulos
 	\end{itemize} 
 \end{itemize} 
 
-\subsection{\textbf{Servidores}}
+\subsection{Servidores}
 
 \begin{itemize}
 \item \textbf{X1:} 
@@ -287,7 +287,7 @@ A continuación, se detalla una lista con los múltiples dispositivos y módulos
 	\end{itemize} 
 \end{itemize} 
 
-\subsection{\textbf{Fuentes de alimentación}}
+\subsection{Fuentes de alimentación}
 
 Esta función será desarrollada por un módulo único compartido por ambos cuadros domóticos de la vivienda. Su cometido es el de transformar la corriente alterna proveniente de la acometida pública que llega a las casas con una tensión de 230V entre fase y neutro, en corriente continua de 29V, que es el potencial de bus necesario para alimentar los dispositivos. Este dispositivo no cuenta con ningún tipo de distribuidor de intensidad, por lo que la corriente nominal será repartida de manera discrecional en las salidas, hasta un máximo de 640 mA. Para prevenir posibles comportamientos anómalos de la red eléctrica, este dispositivo cuenta con una bobina de choque integrada en su interior, un componente electrónico de muy alta reactancia que hará las veces de filtro de las corrientes alternas, eludiendo futuras fallas o roturas de los mecanismos domóticos..
 \begin{figure}[h]
