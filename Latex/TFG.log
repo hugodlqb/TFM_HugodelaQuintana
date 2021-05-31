@@ -1,7 +1,7 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.22 (MiKTeX 21.2) (preloaded format=latex 2021.4.18)  18 APR 2021 18:20
+This is pdfTeX, Version 3.141592653-2.6-1.40.22 (MiKTeX 21.2) (preloaded format=pdflatex 2021.4.18)  28 MAY 2021 07:45
 entering extended mode
-**./TFG.tex
-(TFG.tex
+**C:/Users/jlara/Downloads/TFM/Latex/TFG.tex
+(C:/Users/jlara/Downloads/TFM/Latex/TFG.tex
 LaTeX2e <2020-10-01> patch level 4
 L3 programming layer <2021-02-18> xparse <2020-03-03>
 (C:\Users\jlara\AppData\Local\Programs\MiKTeX\tex/latex/base\book.cls
@@ -27,6 +27,15 @@ Package: inputenc 2020/08/01 v1.3d Input encoding file
 \inpenc@prehook=\toks15
 \inpenc@posthook=\toks16
 )
+(C:\Users\jlara\AppData\Local\Programs\MiKTeX\tex/latex/amsfonts\amsfonts.sty
+Package: amsfonts 2013/01/14 v3.01 Basic AMSFonts support
+\@emptytoks=\toks17
+\symAMSa=\mathgroup4
+\symAMSb=\mathgroup5
+LaTeX Font Info:    Redeclaring math symbol \hbar on input line 98.
+LaTeX Font Info:    Overwriting math alphabet `\mathfrak' in version `bold'
+(Font)                  U/euf/m/n --> U/euf/b/n on input line 106.
+)
 (C:\Users\jlara\AppData\Local\Programs\MiKTeX\tex/latex/amsmath\amsmath.sty
 Package: amsmath 2020/09/23 v2.17i AMS math features
 \@mathmargin=\skip49
@@ -37,7 +46,7 @@ Package: amstext 2000/06/29 v2.01 AMS text
 
 (C:\Users\jlara\AppData\Local\Programs\MiKTeX\tex/latex/amsmath\amsgen.sty
 File: amsgen.sty 1999/11/30 v2.0 generic functions
-\@emptytoks=\toks17
+\@emptytoks=\toks18
 \ex@=\dimen139
 ))
 (C:\Users\jlara\AppData\Local\Programs\MiKTeX\tex/latex/amsmath\amsbsy.sty
@@ -67,41 +76,57 @@ LaTeX Font Info:    Redeclaring font encoding OMS on input line 744.
 \dotsspace@=\muskip16
 \c@parentequation=\count195
 \dspbrk@lvl=\count196
-\tag@help=\toks18
+\tag@help=\toks19
 \row@=\count197
 \column@=\count198
 \maxfields@=\count199
-\andhelp@=\toks19
+\andhelp@=\toks20
 \eqnshift@=\dimen142
 \alignsep@=\dimen143
 \tagshift@=\dimen144
 \tagwidth@=\dimen145
 \totwidth@=\dimen146
 \lineht@=\dimen147
-\@envbody=\toks20
+\@envbody=\toks21
 \multlinegap=\skip50
 \multlinetaggap=\skip51
-\mathdisplay@stack=\toks21
+\mathdisplay@stack=\toks22
 LaTeX Info: Redefining \[ on input line 2923.
 LaTeX Info: Redefining \] on input line 2924.
 )
-(C:\Users\jlara\AppData\Local\Programs\MiKTeX\tex/latex/amsfonts\amsfonts.sty
-Package: amsfonts 2013/01/14 v3.01 Basic AMSFonts support
-\symAMSa=\mathgroup4
-\symAMSb=\mathgroup5
-LaTeX Font Info:    Redeclaring math symbol \hbar on input line 98.
-LaTeX Font Info:    Overwriting math alphabet `\mathfrak' in version `bold'
-(Font)                  U/euf/m/n --> U/euf/b/n on input line 106.
-)
 (C:\Users\jlara\AppData\Local\Programs\MiKTeX\tex/latex/amsfonts\amssymb.sty
 Package: amssymb 2013/01/14 v3.01 AMS font symbols
+)
+(C:\Users\jlara\AppData\Local\Programs\MiKTeX\tex/latex/appendix\appendix.sty
+Package: appendix 2020/02/08 v1.2c extra appendix facilities
+\c@@pps=\count266
+\c@@ppsavesec=\count267
+\c@@ppsaveapp=\count268
+)
+(C:\Users\jlara\AppData\Local\Programs\MiKTeX\tex/latex/latex-tools\array.sty
+Package: array 2020/10/01 v2.5c Tabular extension package (FMi)
+\col@sep=\dimen148
+\ar@mcellbox=\box49
+\extrarowheight=\dimen149
+\NC@list=\toks23
+\extratabsurround=\skip52
+\backup@length=\skip53
+\ar@cellbox=\box50
+)
+(C:\Users\jlara\AppData\Local\Programs\MiKTeX\tex/latex/float\float.sty
+Package: float 2001/11/08 v1.3d Float enhancements (AL)
+\c@float@type=\count269
+\float@exts=\toks24
+\float@box=\box51
+\@float@everytoks=\toks25
+\@floatcapt=\box52
 )
 (C:\Users\jlara\AppData\Local\Programs\MiKTeX\tex/latex/graphics\graphicx.sty
 Package: graphicx 2020/09/09 v1.2b Enhanced LaTeX Graphics (DPC,SPQR)
 
 (C:\Users\jlara\AppData\Local\Programs\MiKTeX\tex/latex/graphics\keyval.sty
 Package: keyval 2014/10/28 v1.15 key=value parser (DPC)
-\KV@toks@=\toks22
+\KV@toks@=\toks26
 )
 (C:\Users\jlara\AppData\Local\Programs\MiKTeX\tex/latex/graphics\graphics.sty
 Package: graphics 2020/08/30 v1.4c Standard LaTeX Graphics (DPC,SPQR)
@@ -113,65 +138,517 @@ Package: trig 2016/01/03 v1.10 sin cos tan (DPC)
 fg
 File: graphics.cfg 2016/06/04 v1.11 sample graphics configuration
 )
-Package graphics Info: Driver file: dvips.def on input line 105.
+Package graphics Info: Driver file: pdftex.def on input line 105.
 
-(C:\Users\jlara\AppData\Local\Programs\MiKTeX\tex/latex/graphics-def\dvips.def
-File: dvips.def 2017/06/20 v3.1d Graphics/color driver for dvips
+(C:\Users\jlara\AppData\Local\Programs\MiKTeX\tex/latex/graphics-def\pdftex.def
+File: pdftex.def 2020/10/05 v1.2a Graphics/color driver for pdftex
 ))
-\Gin@req@height=\dimen148
-\Gin@req@width=\dimen149
+\Gin@req@height=\dimen150
+\Gin@req@width=\dimen151
+)
+(C:\Users\jlara\AppData\Local\Programs\MiKTeX\tex/latex/latex-tools\longtable.s
+ty
+Package: longtable 2020/01/07 v4.13 Multi-page Table package (DPC)
+\LTleft=\skip54
+\LTright=\skip55
+\LTpre=\skip56
+\LTpost=\skip57
+\LTchunksize=\count270
+\LTcapwidth=\dimen152
+\LT@head=\box53
+\LT@firsthead=\box54
+\LT@foot=\box55
+\LT@lastfoot=\box56
+\LT@cols=\count271
+\LT@rows=\count272
+\c@LT@tables=\count273
+\c@LT@chunks=\count274
+\LT@p@ftn=\toks27
+)
+(C:\Users\jlara\AppData\Local\Programs\MiKTeX\tex/latex/listings\listings.sty
+\lst@mode=\count275
+\lst@gtempboxa=\box57
+\lst@token=\toks28
+\lst@length=\count276
+\lst@currlwidth=\dimen153
+\lst@column=\count277
+\lst@pos=\count278
+\lst@lostspace=\dimen154
+\lst@width=\dimen155
+\lst@newlines=\count279
+\lst@lineno=\count280
+\lst@maxwidth=\dimen156
+
+(C:\Users\jlara\AppData\Local\Programs\MiKTeX\tex/latex/listings\lstmisc.sty
+File: lstmisc.sty 2020/03/24 1.8d (Carsten Heinz)
+\c@lstnumber=\count281
+\lst@skipnumbers=\count282
+\lst@framebox=\box58
+)
+(C:\Users\jlara\AppData\Local\Programs\MiKTeX\tex/latex/listings\listings.cfg
+File: listings.cfg 2020/03/24 1.8d listings configuration
+))
+Package: listings 2020/03/24 1.8d (Carsten Heinz)
+(C:\Users\jlara\AppData\Local\Programs\MiKTeX\tex/latex/graphics\lscape.sty
+Package: lscape 2020/05/28 v3.02 Landscape Pages (DPC)
+)
+(C:\Users\jlara\AppData\Local\Programs\MiKTeX\tex/latex/multirow\multirow.sty
+Package: multirow 2021/03/15 v2.8 Span multiple rows of a table
+\multirow@colwidth=\skip58
+\multirow@cntb=\count283
+\multirow@dima=\skip59
+\bigstrutjot=\dimen157
+)
+(C:\Users\jlara\AppData\Local\Programs\MiKTeX\tex/latex/pgfgantt\pgfgantt.sty
+Package: pgfgantt 2018/01/10 v5.0 Draw Gantt diagrams with TikZ
+
+(C:\Users\jlara\AppData\Local\Programs\MiKTeX\tex/latex/pgf/frontendlayer\tikz.
+sty
+(C:\Users\jlara\AppData\Local\Programs\MiKTeX\tex/latex/pgf/basiclayer\pgf.sty
+(C:\Users\jlara\AppData\Local\Programs\MiKTeX\tex/latex/pgf/utilities\pgfrcs.st
+y
+(C:\Users\jlara\AppData\Local\Programs\MiKTeX\tex/generic/pgf/utilities\pgfutil
+-common.tex
+\pgfutil@everybye=\toks29
+\pgfutil@tempdima=\dimen158
+\pgfutil@tempdimb=\dimen159
+
+(C:\Users\jlara\AppData\Local\Programs\MiKTeX\tex/generic/pgf/utilities\pgfutil
+-common-lists.tex))
+(C:\Users\jlara\AppData\Local\Programs\MiKTeX\tex/generic/pgf/utilities\pgfutil
+-latex.def
+\pgfutil@abb=\box59
+)
+(C:\Users\jlara\AppData\Local\Programs\MiKTeX\tex/generic/pgf/utilities\pgfrcs.
+code.tex
+(C:\Users\jlara\AppData\Local\Programs\MiKTeX\tex/generic/pgf\pgf.revision.tex)
+Package: pgfrcs 2020/12/27 v3.1.8b (3.1.8b)
+))
+Package: pgf 2020/12/27 v3.1.8b (3.1.8b)
+
+(C:\Users\jlara\AppData\Local\Programs\MiKTeX\tex/latex/pgf/basiclayer\pgfcore.
+sty
+(C:\Users\jlara\AppData\Local\Programs\MiKTeX\tex/latex/pgf/systemlayer\pgfsys.
+sty
+(C:\Users\jlara\AppData\Local\Programs\MiKTeX\tex/generic/pgf/systemlayer\pgfsy
+s.code.tex
+Package: pgfsys 2020/12/27 v3.1.8b (3.1.8b)
+
+(C:\Users\jlara\AppData\Local\Programs\MiKTeX\tex/generic/pgf/utilities\pgfkeys
+.code.tex
+\pgfkeys@pathtoks=\toks30
+\pgfkeys@temptoks=\toks31
+
+(C:\Users\jlara\AppData\Local\Programs\MiKTeX\tex/generic/pgf/utilities\pgfkeys
+filtered.code.tex
+\pgfkeys@tmptoks=\toks32
+))
+\pgf@x=\dimen160
+\pgf@y=\dimen161
+\pgf@xa=\dimen162
+\pgf@ya=\dimen163
+\pgf@xb=\dimen164
+\pgf@yb=\dimen165
+\pgf@xc=\dimen166
+\pgf@yc=\dimen167
+\pgf@xd=\dimen168
+\pgf@yd=\dimen169
+\w@pgf@writea=\write3
+\r@pgf@reada=\read2
+\c@pgf@counta=\count284
+\c@pgf@countb=\count285
+\c@pgf@countc=\count286
+\c@pgf@countd=\count287
+\t@pgf@toka=\toks33
+\t@pgf@tokb=\toks34
+\t@pgf@tokc=\toks35
+\pgf@sys@id@count=\count288
+
+(C:\Users\jlara\AppData\Local\Programs\MiKTeX\tex/generic/pgf/systemlayer\pgf.c
+fg
+File: pgf.cfg 2020/12/27 v3.1.8b (3.1.8b)
+)
+Driver file for pgf: pgfsys-pdftex.def
+
+(C:\Users\jlara\AppData\Local\Programs\MiKTeX\tex/generic/pgf/systemlayer\pgfsy
+s-pdftex.def
+File: pgfsys-pdftex.def 2020/12/27 v3.1.8b (3.1.8b)
+
+(C:\Users\jlara\AppData\Local\Programs\MiKTeX\tex/generic/pgf/systemlayer\pgfsy
+s-common-pdf.def
+File: pgfsys-common-pdf.def 2020/12/27 v3.1.8b (3.1.8b)
+)))
+(C:\Users\jlara\AppData\Local\Programs\MiKTeX\tex/generic/pgf/systemlayer\pgfsy
+ssoftpath.code.tex
+File: pgfsyssoftpath.code.tex 2020/12/27 v3.1.8b (3.1.8b)
+\pgfsyssoftpath@smallbuffer@items=\count289
+\pgfsyssoftpath@bigbuffer@items=\count290
+)
+(C:\Users\jlara\AppData\Local\Programs\MiKTeX\tex/generic/pgf/systemlayer\pgfsy
+sprotocol.code.tex
+File: pgfsysprotocol.code.tex 2020/12/27 v3.1.8b (3.1.8b)
+))
+(C:\Users\jlara\AppData\Local\Programs\MiKTeX\tex/latex/xcolor\xcolor.sty
+Package: xcolor 2016/05/11 v2.12 LaTeX color extensions (UK)
+
+(C:\Users\jlara\AppData\Local\Programs\MiKTeX\tex/latex/graphics-cfg\color.cfg
+File: color.cfg 2016/01/02 v1.6 sample color configuration
+)
+Package xcolor Info: Driver file: pdftex.def on input line 225.
+(C:\Users\jlara\AppData\Local\Programs\MiKTeX\tex/latex/colortbl\colortbl.sty
+Package: colortbl 2020/01/04 v1.0e Color table columns (DPC)
+\everycr=\toks36
+\minrowclearance=\skip60
+)
+\rownum=\count291
+Package xcolor Info: Model `cmy' substituted by `cmy0' on input line 1348.
+Package xcolor Info: Model `hsb' substituted by `rgb' on input line 1352.
+Package xcolor Info: Model `RGB' extended on input line 1364.
+Package xcolor Info: Model `HTML' substituted by `rgb' on input line 1366.
+Package xcolor Info: Model `Hsb' substituted by `hsb' on input line 1367.
+Package xcolor Info: Model `tHsb' substituted by `hsb' on input line 1368.
+Package xcolor Info: Model `HSB' substituted by `hsb' on input line 1369.
+Package xcolor Info: Model `Gray' substituted by `gray' on input line 1370.
+Package xcolor Info: Model `wave' substituted by `hsb' on input line 1371.
+)
+(C:\Users\jlara\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclayer\pgfcor
+e.code.tex
+Package: pgfcore 2020/12/27 v3.1.8b (3.1.8b)
+
+(C:\Users\jlara\AppData\Local\Programs\MiKTeX\tex/generic/pgf/math\pgfmath.code
+.tex
+(C:\Users\jlara\AppData\Local\Programs\MiKTeX\tex/generic/pgf/math\pgfmathcalc.
+code.tex
+(C:\Users\jlara\AppData\Local\Programs\MiKTeX\tex/generic/pgf/math\pgfmathutil.
+code.tex)
+(C:\Users\jlara\AppData\Local\Programs\MiKTeX\tex/generic/pgf/math\pgfmathparse
+r.code.tex
+\pgfmath@dimen=\dimen170
+\pgfmath@count=\count292
+\pgfmath@box=\box60
+\pgfmath@toks=\toks37
+\pgfmath@stack@operand=\toks38
+\pgfmath@stack@operation=\toks39
+)
+(C:\Users\jlara\AppData\Local\Programs\MiKTeX\tex/generic/pgf/math\pgfmathfunct
+ions.code.tex
+(C:\Users\jlara\AppData\Local\Programs\MiKTeX\tex/generic/pgf/math\pgfmathfunct
+ions.basic.code.tex)
+(C:\Users\jlara\AppData\Local\Programs\MiKTeX\tex/generic/pgf/math\pgfmathfunct
+ions.trigonometric.code.tex)
+(C:\Users\jlara\AppData\Local\Programs\MiKTeX\tex/generic/pgf/math\pgfmathfunct
+ions.random.code.tex)
+(C:\Users\jlara\AppData\Local\Programs\MiKTeX\tex/generic/pgf/math\pgfmathfunct
+ions.comparison.code.tex)
+(C:\Users\jlara\AppData\Local\Programs\MiKTeX\tex/generic/pgf/math\pgfmathfunct
+ions.base.code.tex)
+(C:\Users\jlara\AppData\Local\Programs\MiKTeX\tex/generic/pgf/math\pgfmathfunct
+ions.round.code.tex)
+(C:\Users\jlara\AppData\Local\Programs\MiKTeX\tex/generic/pgf/math\pgfmathfunct
+ions.misc.code.tex)
+(C:\Users\jlara\AppData\Local\Programs\MiKTeX\tex/generic/pgf/math\pgfmathfunct
+ions.integerarithmetics.code.tex)))
+(C:\Users\jlara\AppData\Local\Programs\MiKTeX\tex/generic/pgf/math\pgfmathfloat
+.code.tex
+\c@pgfmathroundto@lastzeros=\count293
+))
+(C:\Users\jlara\AppData\Local\Programs\MiKTeX\tex/generic/pgf/math\pgfint.code.
+tex)
+(C:\Users\jlara\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclayer\pgfcor
+epoints.code.tex
+File: pgfcorepoints.code.tex 2020/12/27 v3.1.8b (3.1.8b)
+\pgf@picminx=\dimen171
+\pgf@picmaxx=\dimen172
+\pgf@picminy=\dimen173
+\pgf@picmaxy=\dimen174
+\pgf@pathminx=\dimen175
+\pgf@pathmaxx=\dimen176
+\pgf@pathminy=\dimen177
+\pgf@pathmaxy=\dimen178
+\pgf@xx=\dimen179
+\pgf@xy=\dimen180
+\pgf@yx=\dimen181
+\pgf@yy=\dimen182
+\pgf@zx=\dimen183
+\pgf@zy=\dimen184
+)
+(C:\Users\jlara\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclayer\pgfcor
+epathconstruct.code.tex
+File: pgfcorepathconstruct.code.tex 2020/12/27 v3.1.8b (3.1.8b)
+\pgf@path@lastx=\dimen185
+\pgf@path@lasty=\dimen186
+)
+(C:\Users\jlara\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclayer\pgfcor
+epathusage.code.tex
+File: pgfcorepathusage.code.tex 2020/12/27 v3.1.8b (3.1.8b)
+\pgf@shorten@end@additional=\dimen187
+\pgf@shorten@start@additional=\dimen188
+)
+(C:\Users\jlara\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclayer\pgfcor
+escopes.code.tex
+File: pgfcorescopes.code.tex 2020/12/27 v3.1.8b (3.1.8b)
+\pgfpic=\box61
+\pgf@hbox=\box62
+\pgf@layerbox@main=\box63
+\pgf@picture@serial@count=\count294
+)
+(C:\Users\jlara\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclayer\pgfcor
+egraphicstate.code.tex
+File: pgfcoregraphicstate.code.tex 2020/12/27 v3.1.8b (3.1.8b)
+\pgflinewidth=\dimen189
+)
+(C:\Users\jlara\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclayer\pgfcor
+etransformations.code.tex
+File: pgfcoretransformations.code.tex 2020/12/27 v3.1.8b (3.1.8b)
+\pgf@pt@x=\dimen190
+\pgf@pt@y=\dimen191
+\pgf@pt@temp=\dimen192
+)
+(C:\Users\jlara\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclayer\pgfcor
+equick.code.tex
+File: pgfcorequick.code.tex 2020/12/27 v3.1.8b (3.1.8b)
+)
+(C:\Users\jlara\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclayer\pgfcor
+eobjects.code.tex
+File: pgfcoreobjects.code.tex 2020/12/27 v3.1.8b (3.1.8b)
+)
+(C:\Users\jlara\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclayer\pgfcor
+epathprocessing.code.tex
+File: pgfcorepathprocessing.code.tex 2020/12/27 v3.1.8b (3.1.8b)
+)
+(C:\Users\jlara\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclayer\pgfcor
+earrows.code.tex
+File: pgfcorearrows.code.tex 2020/12/27 v3.1.8b (3.1.8b)
+\pgfarrowsep=\dimen193
+)
+(C:\Users\jlara\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclayer\pgfcor
+eshade.code.tex
+File: pgfcoreshade.code.tex 2020/12/27 v3.1.8b (3.1.8b)
+\pgf@max=\dimen194
+\pgf@sys@shading@range@num=\count295
+\pgf@shadingcount=\count296
+)
+(C:\Users\jlara\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclayer\pgfcor
+eimage.code.tex
+File: pgfcoreimage.code.tex 2020/12/27 v3.1.8b (3.1.8b)
+
+(C:\Users\jlara\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclayer\pgfcor
+eexternal.code.tex
+File: pgfcoreexternal.code.tex 2020/12/27 v3.1.8b (3.1.8b)
+\pgfexternal@startupbox=\box64
+))
+(C:\Users\jlara\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclayer\pgfcor
+elayers.code.tex
+File: pgfcorelayers.code.tex 2020/12/27 v3.1.8b (3.1.8b)
+)
+(C:\Users\jlara\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclayer\pgfcor
+etransparency.code.tex
+File: pgfcoretransparency.code.tex 2020/12/27 v3.1.8b (3.1.8b)
+)
+(C:\Users\jlara\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclayer\pgfcor
+epatterns.code.tex
+File: pgfcorepatterns.code.tex 2020/12/27 v3.1.8b (3.1.8b)
+)
+(C:\Users\jlara\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclayer\pgfcor
+erdf.code.tex
+File: pgfcorerdf.code.tex 2020/12/27 v3.1.8b (3.1.8b)
+)))
+(C:\Users\jlara\AppData\Local\Programs\MiKTeX\tex/generic/pgf/modules\pgfmodule
+shapes.code.tex
+File: pgfmoduleshapes.code.tex 2020/12/27 v3.1.8b (3.1.8b)
+\pgfnodeparttextbox=\box65
+)
+(C:\Users\jlara\AppData\Local\Programs\MiKTeX\tex/generic/pgf/modules\pgfmodule
+plot.code.tex
+File: pgfmoduleplot.code.tex 2020/12/27 v3.1.8b (3.1.8b)
+)
+(C:\Users\jlara\AppData\Local\Programs\MiKTeX\tex/latex/pgf/compatibility\pgfco
+mp-version-0-65.sty
+Package: pgfcomp-version-0-65 2020/12/27 v3.1.8b (3.1.8b)
+\pgf@nodesepstart=\dimen195
+\pgf@nodesepend=\dimen196
+)
+(C:\Users\jlara\AppData\Local\Programs\MiKTeX\tex/latex/pgf/compatibility\pgfco
+mp-version-1-18.sty
+Package: pgfcomp-version-1-18 2020/12/27 v3.1.8b (3.1.8b)
+))
+(C:\Users\jlara\AppData\Local\Programs\MiKTeX\tex/latex/pgf/utilities\pgffor.st
+y
+(C:\Users\jlara\AppData\Local\Programs\MiKTeX\tex/latex/pgf/utilities\pgfkeys.s
+ty
+(C:\Users\jlara\AppData\Local\Programs\MiKTeX\tex/generic/pgf/utilities\pgfkeys
+.code.tex))
+(C:\Users\jlara\AppData\Local\Programs\MiKTeX\tex/latex/pgf/math\pgfmath.sty
+(C:\Users\jlara\AppData\Local\Programs\MiKTeX\tex/generic/pgf/math\pgfmath.code
+.tex))
+(C:\Users\jlara\AppData\Local\Programs\MiKTeX\tex/generic/pgf/utilities\pgffor.
+code.tex
+Package: pgffor 2020/12/27 v3.1.8b (3.1.8b)
+
+(C:\Users\jlara\AppData\Local\Programs\MiKTeX\tex/generic/pgf/math\pgfmath.code
+.tex)
+\pgffor@iter=\dimen197
+\pgffor@skip=\dimen198
+\pgffor@stack=\toks40
+\pgffor@toks=\toks41
+))
+(C:\Users\jlara\AppData\Local\Programs\MiKTeX\tex/generic/pgf/frontendlayer/tik
+z\tikz.code.tex
+Package: tikz 2020/12/27 v3.1.8b (3.1.8b)
+
+(C:\Users\jlara\AppData\Local\Programs\MiKTeX\tex/generic/pgf/libraries\pgflibr
+aryplothandlers.code.tex
+File: pgflibraryplothandlers.code.tex 2020/12/27 v3.1.8b (3.1.8b)
+\pgf@plot@mark@count=\count297
+\pgfplotmarksize=\dimen199
+)
+\tikz@lastx=\dimen256
+\tikz@lasty=\dimen257
+\tikz@lastxsaved=\dimen258
+\tikz@lastysaved=\dimen259
+\tikz@lastmovetox=\dimen260
+\tikz@lastmovetoy=\dimen261
+\tikzleveldistance=\dimen262
+\tikzsiblingdistance=\dimen263
+\tikz@figbox=\box66
+\tikz@figbox@bg=\box67
+\tikz@tempbox=\box68
+\tikz@tempbox@bg=\box69
+\tikztreelevel=\count298
+\tikznumberofchildren=\count299
+\tikznumberofcurrentchild=\count300
+\tikz@fig@count=\count301
+
+(C:\Users\jlara\AppData\Local\Programs\MiKTeX\tex/generic/pgf/modules\pgfmodule
+matrix.code.tex
+File: pgfmodulematrix.code.tex 2020/12/27 v3.1.8b (3.1.8b)
+\pgfmatrixcurrentrow=\count302
+\pgfmatrixcurrentcolumn=\count303
+\pgf@matrix@numberofcolumns=\count304
+)
+\tikz@expandcount=\count305
+
+(C:\Users\jlara\AppData\Local\Programs\MiKTeX\tex/generic/pgf/frontendlayer/tik
+z/libraries\tikzlibrarytopaths.code.tex
+File: tikzlibrarytopaths.code.tex 2020/12/27 v3.1.8b (3.1.8b)
+)))
+(C:\Users\jlara\AppData\Local\Programs\MiKTeX\tex/generic/pgf/frontendlayer/tik
+z/libraries\tikzlibraryarrows.code.tex
+File: tikzlibraryarrows.code.tex 2020/12/27 v3.1.8b (3.1.8b)
+
+(C:\Users\jlara\AppData\Local\Programs\MiKTeX\tex/generic/pgf/libraries\pgflibr
+aryarrows.code.tex
+File: pgflibraryarrows.code.tex 2020/12/27 v3.1.8b (3.1.8b)
+\arrowsize=\dimen264
+))
+(C:\Users\jlara\AppData\Local\Programs\MiKTeX\tex/generic/pgf/frontendlayer/tik
+z/libraries\tikzlibrarybackgrounds.code.tex
+File: tikzlibrarybackgrounds.code.tex 2020/12/27 v3.1.8b (3.1.8b)
+\pgf@layerbox@background=\box70
+\pgf@layerboxsaved@background=\box71
+)
+(C:\Users\jlara\AppData\Local\Programs\MiKTeX\tex/generic/pgf/frontendlayer/tik
+z/libraries\tikzlibrarycalc.code.tex
+File: tikzlibrarycalc.code.tex 2020/12/27 v3.1.8b (3.1.8b)
+)
+(C:\Users\jlara\AppData\Local\Programs\MiKTeX\tex/generic/pgf/frontendlayer/tik
+z/libraries\tikzlibrarypatterns.code.tex
+File: tikzlibrarypatterns.code.tex 2020/12/27 v3.1.8b (3.1.8b)
+
+(C:\Users\jlara\AppData\Local\Programs\MiKTeX\tex/generic/pgf/libraries\pgflibr
+arypatterns.code.tex
+File: pgflibrarypatterns.code.tex 2020/12/27 v3.1.8b (3.1.8b)
+))
+(C:\Users\jlara\AppData\Local\Programs\MiKTeX\tex/generic/pgf/frontendlayer/tik
+z/libraries\tikzlibrarypositioning.code.tex
+File: tikzlibrarypositioning.code.tex 2020/12/27 v3.1.8b (3.1.8b)
+)
+(C:\Users\jlara\AppData\Local\Programs\MiKTeX\tex/generic/pgf/frontendlayer/tik
+z/libraries\tikzlibraryshapes.geometric.code.tex
+File: tikzlibraryshapes.geometric.code.tex 2020/12/27 v3.1.8b (3.1.8b)
+
+(C:\Users\jlara\AppData\Local\Programs\MiKTeX\tex/generic/pgf/libraries/shapes\
+pgflibraryshapes.geometric.code.tex
+File: pgflibraryshapes.geometric.code.tex 2020/12/27 v3.1.8b (3.1.8b)
+))
+(C:\Users\jlara\AppData\Local\Programs\MiKTeX\tex/latex/pgf/utilities\pgfcalend
+ar.sty
+(C:\Users\jlara\AppData\Local\Programs\MiKTeX\tex/generic/pgf/utilities\pgfcale
+ndar.code.tex
+File: pgfcalendar.code.tex 2020/12/27 v3.1.8b (3.1.8b)
+
+(C:\Users\jlara\AppData\Local\Programs\MiKTeX\tex/generic/pgf/math\pgfint.code.
+tex)
+\pgfcalendarcurrentjulian=\count306
+\pgf@cal@easter@Y=\count307
+\pgf@cal@easter@G=\count308
+\pgf@cal@easter@C=\count309
+\pgf@cal@easter@X=\count310
+\pgf@cal@easter@Z=\count311
+\pgf@cal@easter@D=\count312
+\pgf@cal@easter@E=\count313
+\pgf@cal@easter@N=\count314
+\pgf@cal@easter@M=\count315
+\pgf@cal@easter@julianday=\count316
+))
+\gtt@currentline=\count317
+\gtt@lasttitleline=\count318
+\gtt@currgrid=\count319
+\gtt@chartwidth=\count320
+\gtt@lasttitleslot=\count321
+\gtt@elementid=\count322
+\gtt@today@slot=\count323
+\gtt@startjulian=\count324
+\gtt@endjulian=\count325
+\gtt@chartid=\count326
+\gtt@vrule@slot=\count327
+\gtt@calendar@slots=\count328
+\gtt@calendar@weeknumber=\count329
+\gtt@calendar@startofweek=\count330
+\gtt@left@slot=\count331
+\gtt@right@slot=\count332
 )
 (C:\Users\jlara\AppData\Local\Programs\MiKTeX\tex/latex/subfigure\subfigure.sty
 Package: subfigure 2002/07/30 v2.1.4 subfigure package
-\subfigtopskip=\skip52
-\subfigcapskip=\skip53
-\subfigcaptopadj=\dimen150
-\subfigbottomskip=\skip54
-\subfigcapmargin=\dimen151
-\subfiglabelskip=\skip55
-\c@subfigure=\count266
-\c@lofdepth=\count267
-\c@subtable=\count268
-\c@lotdepth=\count269
+\subfigtopskip=\skip61
+\subfigcapskip=\skip62
+\subfigcaptopadj=\dimen265
+\subfigbottomskip=\skip63
+\subfigcapmargin=\dimen266
+\subfiglabelskip=\skip64
+\c@subfigure=\count333
+\c@lofdepth=\count334
+\c@subtable=\count335
+\c@lotdepth=\count336
 ****************************************
 * Local config file subfigure.cfg used *
 ****************************************
 
 (C:\Users\jlara\AppData\Local\Programs\MiKTeX\tex/latex/subfigure\subfigure.cfg
 )
-\subfig@top=\skip56
-\subfig@bottom=\skip57
+\subfig@top=\skip65
+\subfig@bottom=\skip66
 )
-(C:\Users\jlara\AppData\Local\Programs\MiKTeX\tex/latex/listings\listings.sty
-\lst@mode=\count270
-\lst@gtempboxa=\box49
-\lst@token=\toks23
-\lst@length=\count271
-\lst@currlwidth=\dimen152
-\lst@column=\count272
-\lst@pos=\count273
-\lst@lostspace=\dimen153
-\lst@width=\dimen154
-\lst@newlines=\count274
-\lst@lineno=\count275
-\lst@maxwidth=\dimen155
 
-(C:\Users\jlara\AppData\Local\Programs\MiKTeX\tex/latex/listings\lstmisc.sty
-File: lstmisc.sty 2020/03/24 1.8d (Carsten Heinz)
-\c@lstnumber=\count276
-\lst@skipnumbers=\count277
-\lst@framebox=\box50
-)
-(C:\Users\jlara\AppData\Local\Programs\MiKTeX\tex/latex/listings\listings.cfg
-File: listings.cfg 2020/03/24 1.8d listings configuration
-))
-Package: listings 2020/03/24 1.8d (Carsten Heinz)
-(C:\Users\jlara\AppData\Local\Programs\MiKTeX\tex/latex/appendix\appendix.sty
-Package: appendix 2020/02/08 v1.2c extra appendix facilities
-\c@@pps=\count278
-\c@@ppsavesec=\count279
-\c@@ppsaveapp=\count280
-)
+! LaTeX Error: Option clash for package xcolor.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.26 \usepackage
+                {xcolor}
+? H
+The package xcolor has already been loaded with options:
+  []
+There has now been an attempt to load it with options
+  [table,xcdraw]
+Adding the global options:
+  ,table,xcdraw
+to your \documentclass declaration may fix this.
+Try typing  <return>  to proceed.
+? return
+OK, entering \nonstopmode...
 (C:\Users\jlara\AppData\Local\Programs\MiKTeX\tex/latex/geometry\geometry.sty
 Package: geometry 2020/01/02 v5.9 Page Geometry
 
@@ -181,66 +658,45 @@ Package: ifvtex 2019/10/25 v1.7 ifvtex legacy package. Use iftex instead.
 (C:\Users\jlara\AppData\Local\Programs\MiKTeX\tex/generic/iftex\iftex.sty
 Package: iftex 2020/03/06 v1.0d TeX engine tests
 ))
-\Gm@cnth=\count281
-\Gm@cntv=\count282
-\c@Gm@tempcnt=\count283
-\Gm@bindingoffset=\dimen156
-\Gm@wd@mp=\dimen157
-\Gm@odd@mp=\dimen158
-\Gm@even@mp=\dimen159
-\Gm@layoutwidth=\dimen160
-\Gm@layoutheight=\dimen161
-\Gm@layouthoffset=\dimen162
-\Gm@layoutvoffset=\dimen163
-\Gm@dimlist=\toks24
+\Gm@cnth=\count337
+\Gm@cntv=\count338
+\c@Gm@tempcnt=\count339
+\Gm@bindingoffset=\dimen267
+\Gm@wd@mp=\dimen268
+\Gm@odd@mp=\dimen269
+\Gm@even@mp=\dimen270
+\Gm@layoutwidth=\dimen271
+\Gm@layoutheight=\dimen272
+\Gm@layouthoffset=\dimen273
+\Gm@layoutvoffset=\dimen274
+\Gm@dimlist=\toks42
 
 (C:\Users\jlara\AppData\Local\Programs\MiKTeX\tex/latex/geometry\geometry.cfg))
 
 (C:\Users\jlara\AppData\Local\Programs\MiKTeX\tex/latex/latex-tools\multicol.st
 y
 Package: multicol 2019/12/09 v1.8y multicolumn formatting (FMi)
-\c@tracingmulticols=\count284
-\mult@box=\box51
-\multicol@leftmargin=\dimen164
-\c@unbalance=\count285
-\c@collectmore=\count286
-\doublecol@number=\count287
-\multicoltolerance=\count288
-\multicolpretolerance=\count289
-\full@width=\dimen165
-\page@free=\dimen166
-\premulticols=\dimen167
-\postmulticols=\dimen168
-\multicolsep=\skip58
-\multicolbaselineskip=\skip59
-\partial@page=\box52
-\last@line=\box53
-\maxbalancingoverflow=\dimen169
-\mult@rightbox=\box54
-\mult@grightbox=\box55
-\mult@gfirstbox=\box56
-\mult@firstbox=\box57
-\@tempa=\box58
-\@tempa=\box59
-\@tempa=\box60
-\@tempa=\box61
-\@tempa=\box62
-\@tempa=\box63
-\@tempa=\box64
-\@tempa=\box65
-\@tempa=\box66
-\@tempa=\box67
-\@tempa=\box68
-\@tempa=\box69
-\@tempa=\box70
-\@tempa=\box71
-\@tempa=\box72
-\@tempa=\box73
-\@tempa=\box74
-\@tempa=\box75
-\@tempa=\box76
-\@tempa=\box77
-\@tempa=\box78
+\c@tracingmulticols=\count340
+\mult@box=\box72
+\multicol@leftmargin=\dimen275
+\c@unbalance=\count341
+\c@collectmore=\count342
+\doublecol@number=\count343
+\multicoltolerance=\count344
+\multicolpretolerance=\count345
+\full@width=\dimen276
+\page@free=\dimen277
+\premulticols=\dimen278
+\postmulticols=\dimen279
+\multicolsep=\skip67
+\multicolbaselineskip=\skip68
+\partial@page=\box73
+\last@line=\box74
+\maxbalancingoverflow=\dimen280
+\mult@rightbox=\box75
+\mult@grightbox=\box76
+\mult@gfirstbox=\box77
+\mult@firstbox=\box78
 \@tempa=\box79
 \@tempa=\box80
 \@tempa=\box81
@@ -257,40 +713,1282 @@ Package: multicol 2019/12/09 v1.8y multicolumn formatting (FMi)
 \@tempa=\box92
 \@tempa=\box93
 \@tempa=\box94
-\c@minrows=\count290
-\c@columnbadness=\count291
-\c@finalcolumnbadness=\count292
-\last@try=\dimen170
-\multicolovershoot=\dimen171
-\multicolundershoot=\dimen172
-\mult@nat@firstbox=\box95
-\colbreak@box=\box96
-\mc@col@check@num=\count293
+\@tempa=\box95
+\@tempa=\box96
+\@tempa=\box97
+\@tempa=\box98
+\@tempa=\box99
+\@tempa=\box100
+\@tempa=\box101
+\@tempa=\box102
+\@tempa=\box103
+\@tempa=\box104
+\@tempa=\box105
+\@tempa=\box106
+\@tempa=\box107
+\@tempa=\box108
+\@tempa=\box109
+\@tempa=\box110
+\@tempa=\box111
+\@tempa=\box112
+\@tempa=\box113
+\@tempa=\box114
+\@tempa=\box115
+\c@minrows=\count346
+\c@columnbadness=\count347
+\c@finalcolumnbadness=\count348
+\last@try=\dimen281
+\multicolovershoot=\dimen282
+\multicolundershoot=\dimen283
+\mult@nat@firstbox=\box116
+\colbreak@box=\box117
+\mc@col@check@num=\count349
 )
 (C:\Users\jlara\AppData\Local\Programs\MiKTeX\tex/latex/hyperref\hyperref.sty
 Package: hyperref 2021-02-10 v7.00j Hypertext links for LaTeX
 
+(C:\Users\jlara\AppData\Local\Programs\MiKTeX\tex/generic/ltxcmds\ltxcmds.sty
+Package: ltxcmds 2020-05-10 v1.25 LaTeX kernel commands for general use (HO)
+)
+(C:\Users\jlara\AppData\Local\Programs\MiKTeX\tex/generic/pdftexcmds\pdftexcmds
+.sty
+Package: pdftexcmds 2020-06-27 v0.33 Utility functions of pdfTeX for LuaTeX (HO
+)
 
-! LaTeX Error: File `ltxcmds.sty' not found.
+(C:\Users\jlara\AppData\Local\Programs\MiKTeX\tex/generic/infwarerr\infwarerr.s
+ty
+Package: infwarerr 2019/12/03 v1.5 Providing info/warning/error messages (HO)
+)
+Package pdftexcmds Info: \pdf@primitive is available.
+Package pdftexcmds Info: \pdf@ifprimitive is available.
+Package pdftexcmds Info: \pdfdraftmode found.
+)
+(C:\Users\jlara\AppData\Local\Programs\MiKTeX\tex/generic/kvsetkeys\kvsetkeys.s
+ty
+Package: kvsetkeys 2019/12/15 v1.18 Key value parser (HO)
+)
+(C:\Users\jlara\AppData\Local\Programs\MiKTeX\tex/generic/kvdefinekeys\kvdefine
+keys.sty
+Package: kvdefinekeys 2019-12-19 v1.6 Define keys (HO)
+)
+(C:\Users\jlara\AppData\Local\Programs\MiKTeX\tex/generic/pdfescape\pdfescape.s
+ty
+Package: pdfescape 2019/12/09 v1.15 Implements pdfTeX's escape features (HO)
+) (C:\Users\jlara\AppData\Local\Programs\MiKTeX\tex/latex/hycolor\hycolor.sty
+Package: hycolor 2020-01-27 v1.10 Color options for hyperref/bookmark (HO)
+)
+(C:\Users\jlara\AppData\Local\Programs\MiKTeX\tex/latex/letltxmacro\letltxmacro
+.sty
+Package: letltxmacro 2019/12/03 v1.6 Let assignment for LaTeX macros (HO)
+)
+(C:\Users\jlara\AppData\Local\Programs\MiKTeX\tex/latex/auxhook\auxhook.sty
+Package: auxhook 2019-12-17 v1.6 Hooks for auxiliary files (HO)
+)
+(C:\Users\jlara\AppData\Local\Programs\MiKTeX\tex/latex/kvoptions\kvoptions.sty
+Package: kvoptions 2020-10-07 v3.14 Key value format for package options (HO)
+)
+\@linkdim=\dimen284
+\Hy@linkcounter=\count350
+\Hy@pagecounter=\count351
+ (C:\Users\jlara\AppData\Local\Programs\MiKTeX\tex/latex/hyperref\pd1enc.def
+File: pd1enc.def 2021-02-10 v7.00j Hyperref: PDFDocEncoding definition (HO)
+Now handling font encoding PD1 ...
+... no UTF-8 mapping file for font encoding PD1
+)
+(C:\Users\jlara\AppData\Local\Programs\MiKTeX\tex/latex/hyperref\hyperref-langp
+atches.def
+File: hyperref-langpatches.def 2021-02-10 v7.00j Hyperref: patches for babel la
+nguages
+)
+(C:\Users\jlara\AppData\Local\Programs\MiKTeX\tex/generic/intcalc\intcalc.sty
+Package: intcalc 2019/12/15 v1.3 Expandable calculations with integers (HO)
+)
+(C:\Users\jlara\AppData\Local\Programs\MiKTeX\tex/generic/etexcmds\etexcmds.sty
+Package: etexcmds 2019/12/15 v1.7 Avoid name clashes with e-TeX commands (HO)
+)
+\Hy@SavedSpaceFactor=\count352
+ (C:\Users\jlara\AppData\Local\Programs\MiKTeX\tex/latex/hyperref\puenc.def
+File: puenc.def 2021-02-10 v7.00j Hyperref: PDF Unicode definition (HO)
+Now handling font encoding PU ...
+... no UTF-8 mapping file for font encoding PU
+)
+Package hyperref Info: Hyper figures OFF on input line 4192.
+Package hyperref Info: Link nesting OFF on input line 4197.
+Package hyperref Info: Hyper index ON on input line 4200.
+Package hyperref Info: Plain pages OFF on input line 4207.
+Package hyperref Info: Backreferencing OFF on input line 4212.
+Package hyperref Info: Implicit mode ON; LaTeX internals redefined.
+Package hyperref Info: Bookmarks ON on input line 4445.
+\c@Hy@tempcnt=\count353
 
-Type X to quit or <RETURN> to proceed,
-or enter new name. (Default extension: sty)
+(C:\Users\jlara\AppData\Local\Programs\MiKTeX\tex/latex/url\url.sty
+\Urlmuskip=\muskip17
+Package: url 2013/09/16  ver 3.4  Verb mode for urls, etc.
+)
+LaTeX Info: Redefining \url on input line 4804.
+\XeTeXLinkMargin=\dimen285
 
-Enter file name: 
-! Emergency stop.
-<read *> 
-         
-l.106 \RequirePackage{ltxcmds}[2010/11/12]
-                                          
-*** (cannot \read from terminal in nonstop modes)
+(C:\Users\jlara\AppData\Local\Programs\MiKTeX\tex/generic/bitset\bitset.sty
+Package: bitset 2019/12/09 v1.3 Handle bit-vector datatype (HO)
 
- 
+(C:\Users\jlara\AppData\Local\Programs\MiKTeX\tex/generic/bigintcalc\bigintcalc
+.sty
+Package: bigintcalc 2019/12/15 v1.5 Expandable calculations on big integers (HO
+)
+))
+\Fld@menulength=\count354
+\Field@Width=\dimen286
+\Fld@charsize=\dimen287
+Package hyperref Info: Hyper figures OFF on input line 6075.
+Package hyperref Info: Link nesting OFF on input line 6080.
+Package hyperref Info: Hyper index ON on input line 6083.
+Package hyperref Info: backreferencing OFF on input line 6090.
+Package hyperref Info: Link coloring OFF on input line 6095.
+Package hyperref Info: Link coloring with OCG OFF on input line 6100.
+Package hyperref Info: PDF/A mode OFF on input line 6105.
+LaTeX Info: Redefining \ref on input line 6145.
+LaTeX Info: Redefining \pageref on input line 6149.
+
+(C:\Users\jlara\AppData\Local\Programs\MiKTeX\tex/latex/base\atbegshi-ltx.sty
+Package: atbegshi-ltx 2020/08/17 v1.0a Emulation of the original atbegshi packa
+ge
+with kernel methods
+)
+\Hy@abspage=\count355
+\c@Item=\count356
+\c@Hfootnote=\count357
+)
+Package hyperref Info: Driver (autodetected): hpdftex.
+(C:\Users\jlara\AppData\Local\Programs\MiKTeX\tex/latex/hyperref\hpdftex.def
+File: hpdftex.def 2021-02-10 v7.00j Hyperref driver for pdfTeX
+
+(C:\Users\jlara\AppData\Local\Programs\MiKTeX\tex/latex/base\atveryend-ltx.sty
+Package: atveryend-ltx 2020/08/19 v1.0a Emulation of the original atvery packag
+e
+with kernel methods
+)
+\Fld@listcount=\count358
+\c@bookmark@seq@number=\count359
+
+(C:\Users\jlara\AppData\Local\Programs\MiKTeX\tex/latex/rerunfilecheck\rerunfil
+echeck.sty
+Package: rerunfilecheck 2019/12/05 v1.9 Rerun checks for auxiliary files (HO)
+
+(C:\Users\jlara\AppData\Local\Programs\MiKTeX\tex/generic/uniquecounter\uniquec
+ounter.sty
+Package: uniquecounter 2019/12/15 v1.4 Provide unlimited unique counter (HO)
+)
+Package uniquecounter Info: New unique counter `rerunfilecheck' on input line 2
+86.
+)
+\Hy@SectionHShift=\skip69
+)
+Package hyperref Info: Option `colorlinks' set `true' on input line 48.
+
+(C:\Users\jlara\AppData\Local\Programs\MiKTeX\tex/latex/l3backend\l3backend-pdf
+tex.def
+File: l3backend-pdftex.def 2021-02-18 L3 backend support: PDF output (pdfTeX)
+\l__color_backend_stack_int=\count360
+\l__pdf_internal_box=\box118
+) (C:/Users/jlara/Downloads/TFM/Latex\TFG.aux
+(C:/Users/jlara/Downloads/TFM/Latex\chapters/portada.aux)
+(C:/Users/jlara/Downloads/TFM/Latex\chapters/firmas.aux)
+(C:/Users/jlara/Downloads/TFM/Latex\chapters/licencia.aux)
+(C:/Users/jlara/Downloads/TFM/Latex\chapters/evaluacion.aux)
+(C:/Users/jlara/Downloads/TFM/Latex\chapters/agradecimientos.aux)
+(C:/Users/jlara/Downloads/TFM/Latex\chapters/abstract.aux)
+(C:/Users/jlara/Downloads/TFM/Latex\chapters/introduction.aux)
+(C:/Users/jlara/Downloads/TFM/Latex\chapters/theoricbackground.aux)
+(C:/Users/jlara/Downloads/TFM/Latex\chapters/stateart.aux)
+(C:/Users/jlara/Downloads/TFM/Latex\chapters/howtowritelatex.aux)
+(C:/Users/jlara/Downloads/TFM/Latex\chapters/results.aux)
+(C:/Users/jlara/Downloads/TFM/Latex\chapters/management.aux)
+(C:/Users/jlara/Downloads/TFM/Latex\chapters/conclusion.aux)
+(C:/Users/jlara/Downloads/TFM/Latex\chapters/appendix.aux))
+\openout1 = `TFG.aux'.
+
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 58.
+LaTeX Font Info:    ... okay on input line 58.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 58.
+LaTeX Font Info:    ... okay on input line 58.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 58.
+LaTeX Font Info:    ... okay on input line 58.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 58.
+LaTeX Font Info:    ... okay on input line 58.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 58.
+LaTeX Font Info:    ... okay on input line 58.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 58.
+LaTeX Font Info:    ... okay on input line 58.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 58.
+LaTeX Font Info:    ... okay on input line 58.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 58.
+LaTeX Font Info:    ... okay on input line 58.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 58.
+LaTeX Font Info:    ... okay on input line 58.
+
+(C:\Users\jlara\AppData\Local\Programs\MiKTeX\tex/context/base/mkii\supp-pdf.mk
+ii
+[Loading MPS to PDF converter (version 2006.09.02).]
+\scratchcounter=\count361
+\scratchdimen=\dimen288
+\scratchbox=\box119
+\nofMPsegments=\count362
+\nofMParguments=\count363
+\everyMPshowfont=\toks43
+\MPscratchCnt=\count364
+\MPscratchDim=\dimen289
+\MPnumerator=\count365
+\makeMPintoPDFobject=\count366
+\everyMPtoPDFconversion=\toks44
+)
+(C:\Users\jlara\AppData\Local\Programs\MiKTeX\tex/latex/epstopdf-pkg\epstopdf-b
+ase.sty
+Package: epstopdf-base 2020-01-24 v2.11 Base part for package epstopdf
+Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 4
+85.
+)
+\c@lstlisting=\count367
+
+*geometry* driver: auto-detecting
+*geometry* detected driver: pdftex
+*geometry* verbose mode - [ preamble ] result:
+* driver: pdftex
+* paper: a4paper
+* layout: <same size as paper>
+* layoutoffset:(h,v)=(0.0pt,0.0pt)
+* modes: twoside 
+* h-part:(L,W,R)=(85.35826pt, 426.79135pt, 85.35826pt)
+* v-part:(T,H,B)=(85.35826pt, 674.33032pt, 85.35826pt)
+* \paperwidth=597.50787pt
+* \paperheight=845.04684pt
+* \textwidth=426.79135pt
+* \textheight=674.33032pt
+* \oddsidemargin=13.08827pt
+* \evensidemargin=13.08827pt
+* \topmargin=-16.97922pt
+* \headheight=12.0pt
+* \headsep=18.06749pt
+* \topskip=10.0pt
+* \footskip=25.29494pt
+* \marginparwidth=115.0pt
+* \marginparsep=7.0pt
+* \columnsep=10.0pt
+* \skip\footins=9.0pt plus 4.0pt minus 2.0pt
+* \hoffset=0.0pt
+* \voffset=0.0pt
+* \mag=1000
+* \@twocolumnfalse
+* \@twosidetrue
+* \@mparswitchtrue
+* \@reversemarginfalse
+* (1in=72.27pt=25.4mm, 1cm=28.453pt)
+
+Package hyperref Info: Link coloring ON on input line 58.
+(C:\Users\jlara\AppData\Local\Programs\MiKTeX\tex/latex/hyperref\nameref.sty
+Package: nameref 2021-04-02 v2.47 Cross-referencing by name of section
+
+(C:\Users\jlara\AppData\Local\Programs\MiKTeX\tex/latex/refcount\refcount.sty
+Package: refcount 2019/12/15 v3.6 Data extraction from label references (HO)
+)
+(C:\Users\jlara\AppData\Local\Programs\MiKTeX\tex/generic/gettitlestring\gettit
+lestring.sty
+Package: gettitlestring 2019/12/15 v1.6 Cleanup title references (HO)
+)
+\c@section@level=\count368
+)
+LaTeX Info: Redefining \ref on input line 58.
+LaTeX Info: Redefining \pageref on input line 58.
+LaTeX Info: Redefining \nameref on input line 58.
+ (C:/Users/jlara/Downloads/TFM/Latex\TFG.out)
+(C:/Users/jlara/Downloads/TFM/Latex\TFG.out)
+\@outlinefile=\write4
+\openout4 = `TFG.out'.
+
+\openout2 = `chapters/portada.aux'.
+
+
+(C:/Users/jlara/Downloads/TFM/Latex\chapters/portada.tex
+<figures/cabecera.png, id=153, 1130.2225pt x 357.335pt>
+File: figures/cabecera.png Graphic file (type png)
+<use figures/cabecera.png>
+Package pdftex.def Info: figures/cabecera.png  used on input line 6.
+(pdftex.def)             Requested size: 426.79135pt x 134.93266pt.
+ [1
+
+
+
+
+{C:/Users/jlara/AppData/Local/MiKTeX/pdftex/config/pdftex.map} <C:/Users/jlara/
+Downloads/TFM/Latex/figures/cabecera.png>] [2
+
+])
+\openout2 = `chapters/firmas.aux'.
+
+
+(C:/Users/jlara/Downloads/TFM/Latex\chapters/firmas.tex
+File: figures/cabecera.png Graphic file (type png)
+<use figures/cabecera.png>
+Package pdftex.def Info: figures/cabecera.png  used on input line 6.
+(pdftex.def)             Requested size: 426.79135pt x 134.93266pt.
+ [3
+
+
+
+] [4
+
+])
+\openout2 = `chapters/licencia.aux'.
+
+
+(C:/Users/jlara/Downloads/TFM/Latex\chapters/licencia.tex) [5
+
+
+
+]
+\openout2 = `chapters/evaluacion.aux'.
+
+
+(C:/Users/jlara/Downloads/TFM/Latex\chapters/evaluacion.tex [6
+
+
+
+
+]
+Underfull \hbox (badness 10000) in paragraph at lines 21--22
+
+ []
+
+LaTeX Font Info:    Trying to load font information for U+msa on input line 31.
+
+(C:\Users\jlara\AppData\Local\Programs\MiKTeX\tex/latex/amsfonts\umsa.fd
+File: umsa.fd 2013/01/14 v3.01 AMS symbols A
+)
+LaTeX Font Info:    Trying to load font information for U+msb on input line 31.
+
+
+(C:\Users\jlara\AppData\Local\Programs\MiKTeX\tex/latex/amsfonts\umsb.fd
+File: umsb.fd 2013/01/14 v3.01 AMS symbols B
+))
+Overfull \hbox (17.61108pt too wide) in paragraph at lines 27--71
+[]$[]$ $[]$ 
+ []
+
+[7]
+\openout2 = `chapters/agradecimientos.aux'.
+
+ (C:/Users/jlara/Downloads/TFM/Latex\chapters/agradecimientos.tex [8
+
+
+
+
+])
+[9]
+\openout2 = `chapters/abstract.aux'.
+
+ (C:/Users/jlara/Downloads/TFM/Latex\chapters/abstract.tex [10
+
+
+
+
+]) [11]
+[12
+
+
+
+] (C:/Users/jlara/Downloads/TFM/Latex\TFG.toc [13])
+\tf@toc=\write5
+\openout5 = `TFG.toc'.
+
+ [14]
+(C:/Users/jlara/Downloads/TFM/Latex\TFG.lof)
+\tf@lof=\write6
+\openout6 = `TFG.lof'.
+
+ [15
+
+] [16
+
+]
+(C:/Users/jlara/Downloads/TFM/Latex\TFG.lot)
+\tf@lot=\write7
+\openout7 = `TFG.lot'.
+
+ [17] [18
+
+]
+\openout2 = `chapters/introduction.aux'.
+
+
+(C:/Users/jlara/Downloads/TFM/Latex\chapters/introduction.tex
+Chapter 1.
+) [1
+
+
+]
+\openout2 = `chapters/theoricbackground.aux'.
+
+ (C:/Users/jlara/Downloads/TFM/Latex\chapters/theoricbackground.tex
+[2
+
+
+
+
+]
+Chapter 2.
+
+Overfull \hbox (4.55426pt too wide) in paragraph at lines 19--20
+\OT1/cmr/m/n/12 A con-tin-uacion, se de-talla una lista con los multiples dis
+-pos-i-tivos y modulos domoticos
+ []
+
+[3]
+<figures/actuador_dimmer.jpg, id=303, 64.8021pt x 68.6565pt>
+File: figures/actuador_dimmer.jpg Graphic file (type jpg)
+<use figures/actuador_dimmer.jpg>
+Package pdftex.def Info: figures/actuador_dimmer.jpg  used on input line 31.
+(pdftex.def)             Requested size: 149.37958pt x 158.27638pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 28--34
+
+ []
+
+<figures/actuador_binario.png, id=304, 464.4853pt x 204.01219pt>
+File: figures/actuador_binario.png Graphic file (type png)
+<use figures/actuador_binario.png>
+Package pdftex.def Info: figures/actuador_binario.png  used on input line 45.
+(pdftex.def)             Requested size: 234.73654pt x 103.10472pt.
+
+Underfull \vbox (badness 6125) has occurred while \output is active []
+
+ [4 <C:/Users/jlara/Downloads/TFM/Latex/figures/actuador_dimmer.jpg>]
+<figures/actuador_rejilla.png, id=310, 219.82124pt x 210.03468pt>
+File: figures/actuador_rejilla.png Graphic file (type png)
+<use figures/actuador_rejilla.png>
+Package pdftex.def Info: figures/actuador_rejilla.png  used on input line 58.
+(pdftex.def)             Requested size: 149.37958pt x 142.73195pt.
+<figures/actuador_termico.jpg, id=311, 61.9113pt x 67.452pt>
+File: figures/actuador_termico.jpg Graphic file (type jpg)
+<use figures/actuador_termico.jpg>
+Package pdftex.def Info: figures/actuador_termico.jpg  used on input line 71.
+(pdftex.def)             Requested size: 149.37958pt x 162.76088pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 68--74
+
+ []
+
+[5 <C:/Users/jlara/Downloads/TFM/Latex/figures/actuador_binario.png> <C:/Users/
+jlara/Downloads/TFM/Latex/figures/actuador_rejilla.png>]
+<figures/sensor_co2.jpg, id=319, 49.6254pt x 49.3845pt>
+File: figures/sensor_co2.jpg Graphic file (type jpg)
+<use figures/sensor_co2.jpg>
+Package pdftex.def Info: figures/sensor_co2.jpg  used on input line 88.
+(pdftex.def)             Requested size: 128.0387pt x 127.41779pt.
+ [6 <C:/Users/jlara/Downloads/TFM/Latex/figures/actuador_termico.jpg> <C:/Users
+/jlara/Downloads/TFM/Latex/figures/sensor_co2.jpg>]
+<figures/sensor_movimiento.png, id=330, 122.70844pt x 122.70844pt>
+File: figures/sensor_movimiento.png Graphic file (type png)
+<use figures/sensor_movimiento.png>
+Package pdftex.def Info: figures/sensor_movimiento.png  used on input line 102.
+
+(pdftex.def)             Requested size: 106.69783pt x 106.70117pt.
+<figures/sensor_presencia.png, id=331, 164.11313pt x 88.83188pt>
+File: figures/sensor_presencia.png Graphic file (type png)
+<use figures/sensor_presencia.png>
+Package pdftex.def Info: figures/sensor_presencia.png  used on input line 115.
+(pdftex.def)             Requested size: 149.37958pt x 80.85745pt.
+ [7 <C:/Users/jlara/Downloads/TFM/Latex/figures/sensor_movimiento.png> <C:/User
+s/jlara/Downloads/TFM/Latex/figures/sensor_presencia.png>]
+<figures/sensor_inundacion.png, id=341, 292.09125pt x 179.92218pt>
+File: figures/sensor_inundacion.png Graphic file (type png)
+<use figures/sensor_inundacion.png>
+Package pdftex.def Info: figures/sensor_inundacion.png  used on input line 128.
+
+(pdftex.def)             Requested size: 149.37958pt x 92.01715pt.
+<figures/sensor_apertura.png.jpg, id=342, 319.94531pt x 355.3275pt>
+File: figures/sensor_apertura.png.jpg Graphic file (type jpg)
+<use figures/sensor_apertura.png.jpg>
+Package pdftex.def Info: figures/sensor_apertura.png.jpg  used on input line 14
+1.
+(pdftex.def)             Requested size: 149.37958pt x 165.89787pt.
+
+Overfull \hbox (3.9598pt too wide) in paragraph at lines 150--151
+[]$[]$ \OT1/cmr/m/n/12 sen-sor ter-move-locimetrico al-i-men-tado por pi-las. 
+Dos se~nales
+ []
+
+<figures/sensor_humo.png, id=343, 438.13687pt x 107.65219pt>
+File: figures/sensor_humo.png Graphic file (type png)
+<use figures/sensor_humo.png>
+Package pdftex.def Info: figures/sensor_humo.png  used on input line 154.
+(pdftex.def)             Requested size: 320.0935pt x 78.64949pt.
+[8 <C:/Users/jlara/Downloads/TFM/Latex/figures/sensor_inundacion.png> <C:/Users
+/jlara/Downloads/TFM/Latex/figures/sensor_apertura.png.jpg>]
+Overfull \hbox (20.38786pt too wide) in paragraph at lines 166--167
+[]$[]$ \OT1/cmr/m/n/12 me-di-dor de en-erga electrica para sis-temas monofa
+sicos o trifasicos. 
+ []
+
+<figures/contador_electricidad.png, id=351, 323.70938pt x 209.28188pt>
+File: figures/contador_electricidad.png Graphic file (type png)
+<use figures/contador_electricidad.png>
+Package pdftex.def Info: figures/contador_electricidad.png  used on input line 
+171.
+(pdftex.def)             Requested size: 234.73654pt x 151.76218pt.
+[9 <C:/Users/jlara/Downloads/TFM/Latex/figures/sensor_humo.png> <C:/Users/jlara
+/Downloads/TFM/Latex/figures/contador_electricidad.png>]
+<figures/contador_agua.png, id=359, 278.54062pt x 271.76532pt>
+File: figures/contador_agua.png Graphic file (type png)
+<use figures/contador_agua.png>
+Package pdftex.def Info: figures/contador_agua.png  used on input line 184.
+(pdftex.def)             Requested size: 149.37958pt x 145.74756pt.
+<figures/pulsador.jpg, id=360, 50.1072pt x 50.1072pt>
+File: figures/pulsador.jpg Graphic file (type jpg)
+<use figures/pulsador.jpg>
+Package pdftex.def Info: figures/pulsador.jpg  used on input line 201.
+(pdftex.def)             Requested size: 128.0387pt x 128.07208pt.
+ [10 <C:/Users/jlara/Downloads/TFM/Latex/figures/contador_agua.png> <C:/Users/j
+lara/Downloads/TFM/Latex/figures/pulsador.jpg>]
+<figures/termostato.png, id=369, 198.7425pt x 222.07968pt>
+File: figures/termostato.png Graphic file (type png)
+<use figures/termostato.png>
+Package pdftex.def Info: figures/termostato.png  used on input line 219.
+(pdftex.def)             Requested size: 157.9107pt x 176.45761pt.
+ [11 <C:/Users/jlara/Downloads/TFM/Latex/figures/termostato.png>]
+<figures/g1.png, id=376, 121.95563pt x 210.7875pt>
+File: figures/g1.png Graphic file (type png)
+<use figures/g1.png>
+Package pdftex.def Info: figures/g1.png  used on input line 232.
+(pdftex.def)             Requested size: 106.69783pt x 184.41931pt.
+<figures/entradas_apertura.jpg, id=377, 37.8213pt x 66.4884pt>
+File: figures/entradas_apertura.jpg Graphic file (type jpg)
+<use figures/entradas_apertura.jpg>
+Package pdftex.def Info: figures/entradas_apertura.jpg  used on input line 249.
+
+(pdftex.def)             Requested size: 85.35696pt x 150.05708pt.
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [12 <C:/Users/jlara/Downloads/TFM/Latex/figures/g1.png>]
+<figures/pasarela.png, id=385, 495.35063pt x 376.40625pt>
+File: figures/pasarela.png Graphic file (type png)
+<use figures/pasarela.png>
+Package pdftex.def Info: figures/pasarela.png  used on input line 266.
+(pdftex.def)             Requested size: 200.59245pt x 152.42645pt.
+<figures/x1.png, id=386, 132.495pt x 212.29312pt>
+File: figures/x1.png Graphic file (type png)
+<use figures/x1.png>
+Package pdftex.def Info: figures/x1.png  used on input line 283.
+(pdftex.def)             Requested size: 98.16019pt x 157.28233pt.
+ [13 <C:/Users/jlara/Downloads/TFM/Latex/figures/entradas_apertura.jpg> <C:/Use
+rs/jlara/Downloads/TFM/Latex/figures/pasarela.png>]
+<figures/fuente_alimentacion.png, id=397, 176.15813pt x 216.05719pt>
+File: figures/fuente_alimentacion.png Graphic file (type png)
+<use figures/fuente_alimentacion.png>
+Package pdftex.def Info: figures/fuente_alimentacion.png  used on input line 29
+5.
+(pdftex.def)             Requested size: 128.0387pt x 157.038pt.
+) [14 <C:/Users/jlara/Downloads/TFM/Latex/figures/x1.png> <C:/Users/jlara/Downl
+oads/TFM/Latex/figures/fuente_alimentacion.png>]
+\openout2 = `chapters/stateart.aux'.
+
+
+(C:/Users/jlara/Downloads/TFM/Latex\chapters/stateart.tex
+Chapter 3.
+) [15
+
+
+
+
+]
+\openout2 = `chapters/howtowritelatex.aux'.
+
+ (C:/Users/jlara/Downloads/TFM/Latex\chapters/howtowritelatex.tex
+[16
+
+
+
+
+]
+Chapter 4.
+[17]
+<figures/Logo_UPM.jpg, id=431, 59.0205pt x 48.18pt>
+File: figures/Logo_UPM.jpg Graphic file (type jpg)
+<use figures/Logo_UPM.jpg>
+Package pdftex.def Info: figures/Logo_UPM.jpg  used on input line 66.
+(pdftex.def)             Requested size: 192.0548pt x 156.79184pt.
+
+(C:\Users\jlara\AppData\Local\Programs\MiKTeX\tex/latex/listings\lstlang1.sty
+File: lstlang1.sty 2020/03/24 1.8d listings language file
+)
+(C:\Users\jlara\AppData\Local\Programs\MiKTeX\tex/latex/listings\lstmisc.sty
+File: lstmisc.sty 2020/03/24 1.8d (Carsten Heinz)
+)
+LaTeX Font Info:    Trying to load font information for OML+cmr on input line 8
+3.
+
+(C:\Users\jlara\AppData\Local\Programs\MiKTeX\tex/latex/base\omlcmr.fd
+File: omlcmr.fd 2019/12/16 v2.5j Standard LaTeX font definitions
+)
+LaTeX Font Info:    Font shape `OML/cmr/m/n' in size <8> not available
+(Font)              Font shape `OML/cmm/m/it' tried instead on input line 83.
+LaTeX Font Info:    Trying to load font information for OMS+cmr on input line 8
+7.
+
+(C:\Users\jlara\AppData\Local\Programs\MiKTeX\tex/latex/base\omscmr.fd
+File: omscmr.fd 2019/12/16 v2.5j Standard LaTeX font definitions
+)
+LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <8> not available
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 87.
+)
+[18 <C:/Users/jlara/Downloads/TFM/Latex/figures/Logo_UPM.jpg>] [19]
+\openout2 = `chapters/diseño.aux'.
+
+
+(C:/Users/jlara/Downloads/TFM/Latex\chapters/diseño.tex [20
+
+
+
+
+]
+Chapter 5.
+
+Underfull \hbox (badness 10000) in paragraph at lines 3--5
+
+ []
+
+
+LaTeX Warning: Reference `tab:tabla_dimensionamiento' on page 21 undefined on i
+nput line 10.
+
+[21]
+Underfull \hbox (badness 10000) in paragraph at lines 69--69
+[]|\OT1/cmr/m/n/10 4 el-e-men-tos Kom-fort
+ []
+
+
+Underfull \hbox (badness 1688) in paragraph at lines 75--76
+[]|[] \OT1/cmr/m/n/10 Panel tactil ca-pac-i-tivo
+ []
+
+
+LaTeX Warning: Reference `tab:tabla_dimensionamiento' on page 22 undefined on i
+nput line 96.
+
+[22]
+Underfull \hbox (badness 10000) in paragraph at lines 102--103
+
+ []
+
+
+Overfull \hbox (18.8196pt too wide) in paragraph at lines 102--103
+\OT1/cmr/m/n/12 Para esta seccion tambien se ha he-cho uso de los sis-temas s
+en-so-ri-ales de movimiento,
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 102--103
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 103--105
+
+ []
+
+[23]
+Underfull \hbox (badness 10000) in paragraph at lines 105--106
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 106--107
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 107--108
+
+ []
+
+
+Overfull \hbox (2.116pt too wide) in paragraph at lines 108--128
+[]\OT1/cmr/bx/n/12 Clima: \OT1/cmr/m/n/12 esta seccion sera la en-car-gada de
+ con-tro-lar la tem-per-atura de la vivienda
+ []
+
+[24]
+
+LaTeX Warning: Reference `fig:metodos_control' on page 25 undefined on input li
+ne 131.
+
+<figures/metodos_control.png, id=481, 846.91406pt x 284.56313pt>
+File: figures/metodos_control.png Graphic file (type png)
+<use figures/metodos_control.png>
+Package pdftex.def Info: figures/metodos_control.png  used on input line 134.
+(pdftex.def)             Requested size: 490.80743pt x 164.91211pt.
+
+Overfull \hbox (64.01608pt too wide) in paragraph at lines 134--135
+[][] 
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 129--137
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 129--137
+
+ []
+
+[25]
+Overfull \hbox (13.4016pt too wide) in paragraph at lines 139--140
+[]\OT1/cmr/m/n/12 La pro-gra-macion de este al-go-ritmo re-querira de la con-
+fig-u-racion de tres parametros
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 146--148
+
+ []
+
+[26 <C:/Users/jlara/Downloads/TFM/Latex/figures/metodos_control.png>]
+
+LaTeX Warning: Reference `fig:local_inundacion' on page 27 undefined on input l
+ine 156.
+
+<figures/local_inundacion.png, id=494, 401.24907pt x 157.33781pt>
+File: figures/local_inundacion.png Graphic file (type png)
+<use figures/local_inundacion.png>
+Package pdftex.def Info: figures/local_inundacion.png  used on input line 159.
+(pdftex.def)             Requested size: 362.77525pt x 142.26053pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 154--163
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 154--163
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 154--163
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 154--163
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 154--163
+
+ []
+
+[27]
+<figures/alcance_PIR.png, id=500, 1189.44376pt x 388.45125pt>
+File: figures/alcance_PIR.png Graphic file (type png)
+<use figures/alcance_PIR.png>
+Package pdftex.def Info: figures/alcance_PIR.png  used on input line 166.
+(pdftex.def)             Requested size: 490.80743pt x 160.28552pt.
+
+Overfull \hbox (64.01608pt too wide) in paragraph at lines 166--167
+[][] 
+ []
+
+<figures/alcance_presencia.png, id=501, 760.34062pt x 326.72063pt>
+File: figures/alcance_presencia.png Graphic file (type png)
+<use figures/alcance_presencia.png>
+Package pdftex.def Info: figures/alcance_presencia.png  used on input line 174.
+
+(pdftex.def)             Requested size: 490.80743pt x 210.90517pt.
+
+Overfull \hbox (64.01608pt too wide) in paragraph at lines 174--175
+[][] 
+ []
+
+[28 <C:/Users/jlara/Downloads/TFM/Latex/figures/local_inundacion.png> <C:/Users
+/jlara/Downloads/TFM/Latex/figures/alcance_PIR.png>]
+
+LaTeX Warning: Reference `aped.B' on page 29 undefined on input line 180.
+
+
+LaTeX Warning: Citation `Reglamento:2021' on page 29 undefined on input line 18
+3.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 182--186
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 182--186
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 182--186
+
+ []
+
+[29 <C:/Users/jlara/Downloads/TFM/Latex/figures/alcance_presencia.png>]
+Underfull \hbox (badness 10000) in paragraph at lines 188--190
+
+ []
+
+[30]
+<figures/conex_ilu.png, id=521, 989.19562pt x 910.90312pt>
+File: figures/conex_ilu.png Graphic file (type png)
+<use figures/conex_ilu.png>
+Package pdftex.def Info: figures/conex_ilu.png  used on input line 198.
+(pdftex.def)             Requested size: 490.80743pt x 451.96173pt.
+
+Overfull \hbox (64.01608pt too wide) in paragraph at lines 198--199
+[][] 
+ []
+
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [31]
+Underfull \hbox (badness 10000) in paragraph at lines 205--208
+
+ []
+
+[32 <C:/Users/jlara/Downloads/TFM/Latex/figures/conex_ilu.png>]
+<figures/conex_consumo.png, id=533, 1910.63812pt x 647.41875pt>
+File: figures/conex_consumo.png Graphic file (type png)
+<use figures/conex_consumo.png>
+Package pdftex.def Info: figures/conex_consumo.png  used on input line 211.
+(pdftex.def)             Requested size: 490.80743pt x 166.30962pt.
+
+Overfull \hbox (64.01608pt too wide) in paragraph at lines 211--212
+[][] 
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 218--219
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 218--219
+
+ []
+
+) [33 <C:/Users/jlara/Downloads/TFM/Latex/figures/conex_consumo.png>]
+\openout2 = `chapters/desarrollo.aux'.
+
+
+(C:/Users/jlara/Downloads/TFM/Latex\chapters/desarrollo.tex [34
+
+
+
+
+]
+Chapter 6.
+[35]
+
+LaTeX Warning: Reference `fig:diag_flags' on page 36 undefined on input line 17
+.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 17--19
+
+ []
+
+<figures/diag_flags.png, id=548, 971.12813pt x 710.655pt>
+File: figures/diag_flags.png Graphic file (type png)
+<use figures/diag_flags.png>
+Package pdftex.def Info: figures/diag_flags.png  used on input line 21.
+(pdftex.def)             Requested size: 490.80743pt x 359.15445pt.
+
+Overfull \hbox (64.01608pt too wide) in paragraph at lines 21--22
+[][] 
+ []
+
+[36]
+
+LaTeX Warning: Reference `fig:diag_flags' on page 37 undefined on input line 26
+.
+
+[37 <C:/Users/jlara/Downloads/TFM/Latex/figures/diag_flags.png>] [38] [39]
+Underfull \hbox (badness 10000) in paragraph at lines 181--184
+
+ []
+
+[40]
+<figures/log_dimm_izq.png, id=571, 1177.39874pt x 557.08125pt>
+File: figures/log_dimm_izq.png Graphic file (type png)
+<use figures/log_dimm_izq.png>
+Package pdftex.def Info: figures/log_dimm_izq.png  used on input line 188.
+(pdftex.def)             Requested size: 448.13222pt x 212.03308pt.
+
+Overfull \hbox (21.34087pt too wide) in paragraph at lines 188--189
+[][] 
+ []
+
+<figures/log_dimm_der.png, id=572, 1389.69188pt x 564.60938pt>
+File: figures/log_dimm_der.png Graphic file (type png)
+<use figures/log_dimm_der.png>
+Package pdftex.def Info: figures/log_dimm_der.png  used on input line 195.
+(pdftex.def)             Requested size: 448.13222pt x 182.06573pt.
+
+Overfull \hbox (21.34087pt too wide) in paragraph at lines 195--196
+[][] 
+ []
+
+[41 <C:/Users/jlara/Downloads/TFM/Latex/figures/log_dimm_izq.png> <C:/Users/jla
+ra/Downloads/TFM/Latex/figures/log_dimm_der.png>]
+<figures/log_dimm_b1.png, id=579, 820.56563pt x 82.80937pt>
+File: figures/log_dimm_b1.png Graphic file (type png)
+<use figures/log_dimm_b1.png>
+Package pdftex.def Info: figures/log_dimm_b1.png  used on input line 205.
+(pdftex.def)             Requested size: 490.80743pt x 49.53058pt.
+
+Overfull \hbox (64.01608pt too wide) in paragraph at lines 205--206
+[][] 
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 210--212
+
+ []
+
+<figures/log_dimm_b2.png, id=580, 934.24031pt x 283.81032pt>
+File: figures/log_dimm_b2.png Graphic file (type png)
+<use figures/log_dimm_b2.png>
+Package pdftex.def Info: figures/log_dimm_b2.png  used on input line 214.
+(pdftex.def)             Requested size: 490.80743pt x 149.10225pt.
+
+Overfull \hbox (64.01608pt too wide) in paragraph at lines 214--215
+[][] 
+ []
+
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [42 <C:/Users/jlara/Downloads/TFM/Latex/figures/log_dimm_b1.png>]
+<figures/log_dimm_b3.png, id=587, 959.08313pt x 124.21407pt>
+File: figures/log_dimm_b3.png Graphic file (type png)
+<use figures/log_dimm_b3.png>
+Package pdftex.def Info: figures/log_dimm_b3.png  used on input line 222.
+(pdftex.def)             Requested size: 490.80743pt x 63.56628pt.
+
+Overfull \hbox (64.01608pt too wide) in paragraph at lines 222--223
+[][] 
+ []
+
+<figures/log_dimm_b4.png, id=588, 947.79094pt x 76.78688pt>
+File: figures/log_dimm_b4.png Graphic file (type png)
+<use figures/log_dimm_b4.png>
+Package pdftex.def Info: figures/log_dimm_b4.png  used on input line 230.
+(pdftex.def)             Requested size: 490.80743pt x 39.76302pt.
+
+Overfull \hbox (64.01608pt too wide) in paragraph at lines 230--231
+[][] 
+ []
+
+[43 <C:/Users/jlara/Downloads/TFM/Latex/figures/log_dimm_b2.png> <C:/Users/jlar
+a/Downloads/TFM/Latex/figures/log_dimm_b3.png>]
+<figures/log_dimm_b5.png, id=598, 438.8897pt x 204.765pt>
+File: figures/log_dimm_b5.png Graphic file (type png)
+<use figures/log_dimm_b5.png>
+Package pdftex.def Info: figures/log_dimm_b5.png  used on input line 238.
+(pdftex.def)             Requested size: 490.80743pt x 228.99152pt.
+
+Overfull \hbox (64.01608pt too wide) in paragraph at lines 238--239
+[][] 
+ []
+
+<figures/prog_dim.png, id=599, 827.34094pt x 219.06844pt>
+File: figures/prog_dim.png Graphic file (type png)
+<use figures/prog_dim.png>
+Package pdftex.def Info: figures/prog_dim.png  used on input line 246.
+(pdftex.def)             Requested size: 490.80743pt x 129.96124pt.
+
+Overfull \hbox (64.01608pt too wide) in paragraph at lines 246--247
+[][] 
+ []
+
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [44 <C:/Users/jlara/Downloads/TFM/Latex/figures/log_dimm_b4.png> <C:/Users/jla
+ra/Downloads/TFM/Latex/figures/log_dimm_b5.png>]
+
+LaTeX Warning: Reference `sec:dir_grup' on page 45 undefined on input line 252.
+
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 252--254
+
+ []
+
+
+Overfull \hbox (13.20576pt too wide) in paragraph at lines 252--254
+\OT1/cmr/m/n/12 Finalmente, la pro-gra-macion de una ven-tana o per-siana con-
+tro-lada domoticamente
+ []
+
+<figures/prog_pers.png, id=608, 827.34094pt x 214.55156pt>
+File: figures/prog_pers.png Graphic file (type png)
+<use figures/prog_pers.png>
+Package pdftex.def Info: figures/prog_pers.png  used on input line 256.
+(pdftex.def)             Requested size: 490.80743pt x 127.28163pt.
+
+Overfull \hbox (64.01608pt too wide) in paragraph at lines 256--257
+[][] 
+ []
+
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [45 <C:/Users/jlara/Downloads/TFM/Latex/figures/prog_dim.png>]) [46 <C:/Users/
+jlara/Downloads/TFM/Latex/figures/prog_pers.png>]
+\openout2 = `chapters/results.aux'.
+
+
+(C:/Users/jlara/Downloads/TFM/Latex\chapters/results.tex
+Chapter 7.
+) [47
+
+
+
+
+]
+\openout2 = `chapters/management.aux'.
+
+ (C:/Users/jlara/Downloads/TFM/Latex\chapters/management.tex [48
+
+
+
+
+]
+Chapter 8.
+
+Underfull \hbox (badness 10000) in paragraph at lines 18--19
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 26--27
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 34--35
+
+ []
+
+[49]
+Underfull \hbox (badness 10000) in paragraph at lines 43--44
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 49--50
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 55--56
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 57--58
+
+ []
+
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [50]
+Underfull \vbox (badness 10000) detected at line 173
+ []
+
+
+Overfull \hbox (28.46129pt too wide) in alignment at lines 221--249
+ [] [] [] [] [] [] 
+ []
+
+
+Package longtable Warning: Column widths have changed
+(longtable)                in table 8.2 on input line 249.
+
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [51]
+Overfull \vbox (96.71658pt too high) has occurred while \output is active []
+
+
+[52]) [53]
+\openout2 = `chapters/conclusion.aux'.
+
+ (C:/Users/jlara/Downloads/TFM/Latex\chapters/conclusion.tex [54
+
+
+
+
+]
+Chapter 9.
+) [55]
+\openout2 = `chapters/anexos.aux'.
+
+ (C:/Users/jlara/Downloads/TFM/Latex\chapters/anexos.tex [56
+
+
+
+
+]
+Appendix A.
+! Misplaced \noalign.
+\hline ->\noalign 
+                  {\ifnum 0=`}\fi \let \hskip \vskip \let \vrule \hrule \let...
+l.7 \hline
+          
+I expect to see \noalign only after the \cr of
+an alignment. Proceed, and I'll ignore this case.
+
+! Misplaced alignment tab character &.
+l.9 Dir. física &
+                   Dispositivo & Borna & Descripción\\
+I can't figure out why you would want to use a tab mark
+here. If you just want an ampersand, the remedy is
+simple: Just type `I\&' now. But if some right brace
+up above has ended a previous alignment prematurely,
+you're probably due for more error messages, and you
+might try typing `S' now just to see what is salvageable.
+
+! Misplaced alignment tab character &.
+l.9 Dir. física & Dispositivo &
+                                 Borna & Descripción\\
+I can't figure out why you would want to use a tab mark
+here. If you just want an ampersand, the remedy is
+simple: Just type `I\&' now. But if some right brace
+up above has ended a previous alignment prematurely,
+you're probably due for more error messages, and you
+might try typing `S' now just to see what is salvageable.
+
+! Misplaced alignment tab character &.
+l.9 Dir. física & Dispositivo & Borna &
+                                         Descripción\\
+I can't figure out why you would want to use a tab mark
+here. If you just want an ampersand, the remedy is
+simple: Just type `I\&' now. But if some right brace
+up above has ended a previous alignment prematurely,
+you're probably due for more error messages, and you
+might try typing `S' now just to see what is salvageable.
+
+! Misplaced \noalign.
+\hline ->\noalign 
+                  {\ifnum 0=`}\fi \let \hskip \vskip \let \vrule \hrule \let...
+l.10 \hline
+           
+I expect to see \noalign only after the \cr of
+an alignment. Proceed, and I'll ignore this case.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 8--10
+
+ []
+
+! Misplaced \noalign.
+\hline ->\noalign 
+                  {\ifnum 0=`}\fi \let \hskip \vskip \let \vrule \hrule \let...
+l.11 \hline
+           
+I expect to see \noalign only after the \cr of
+an alignment. Proceed, and I'll ignore this case.
+
+[57] [58
+
+]
+Appendix B.
+) [59] [60
+
+
+
+] (C:/Users/jlara/Downloads/TFM/Latex\TFG.bbl) [61
+
+
+]
+
+Package longtable Warning: Table widths have changed. Rerun LaTeX.
+
+(TFG.aux (chapters/portada.aux) (chapters/firmas.aux) (chapters/licencia.aux)
+(chapters/evaluacion.aux) (chapters/agradecimientos.aux) (chapters/abstract.aux
+) (chapters/introduction.aux) (chapters/theoricbackground.aux)
+(chapters/stateart.aux) (chapters/howtowritelatex.aux) (chapters/diseño.aux)
+(chapters/desarrollo.aux) (chapters/results.aux) (chapters/management.aux)
+(chapters/conclusion.aux) (chapters/anexos.aux))
+
+LaTeX Warning: There were undefined references.
+
+
+LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
+
+
+Package rerunfilecheck Warning: File `TFG.out' has changed.
+(rerunfilecheck)                Rerun to get outlines right
+(rerunfilecheck)                or use package `bookmark'.
+
+Package rerunfilecheck Info: Checksums for `TFG.out':
+(rerunfilecheck)             Before: F6425C8584CE3FB8CAA3E80EA9EF926A;2102
+(rerunfilecheck)             After:  39FEBD330F4A002D5AE0069602AD161E;8496.
+ ) 
 Here is how much of TeX's memory you used:
- 3839 strings out of 479335
- 52495 string characters out of 2857110
- 342476 words of memory out of 3000000
- 21296 multiletter control sequences out of 15000+200000
- 403430 words of font info for 27 fonts, out of 3000000 for 9000
+ 25066 strings out of 479334
+ 468606 string characters out of 2857084
+ 998009 words of memory out of 3000000
+ 41710 multiletter control sequences out of 15000+200000
+ 416253 words of font info for 74 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
- 68i,0n,74p,222b,262s stack positions out of 5000i,500n,10000p,200000b,50000s
-No pages of output.
+ 117i,14n,116p,1814b,1430s stack positions out of 5000i,500n,10000p,200000b,50000s
+pdfTeX warning (dest): name{section.A.1} has been referenced but does not exi
+st, replaced by a fixed one
+
+pdfTeX warning (dest): name{subsection.6.3.3} has been referenced but does not 
+exist, replaced by a fixed one
+
+pdfTeX warning (dest): name{subsection.6.3.2} has been referenced but does not 
+exist, replaced by a fixed one
+
+pdfTeX warning (dest): name{subsection.6.3.1} has been referenced but does not 
+exist, replaced by a fixed one
+
+pdfTeX warning (dest): name{section.1.4} has been referenced but does not exist
+, replaced by a fixed one
+
+ <C:\Users\jlara\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\tcrm08
+00.pk> <C:\Users\jlara\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\
+tcrm1200.pk> <C:\Users\jlara\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/d
+pi600\tcrm1000.pk><C:/Users/jlara/AppData/Local/Programs/MiKTeX/fonts/type1/pub
+lic/amsfonts/cm/cmbx10.pfb><C:/Users/jlara/AppData/Local/Programs/MiKTeX/fonts/
+type1/public/amsfonts/cm/cmbx12.pfb><C:/Users/jlara/AppData/Local/Programs/MiKT
+eX/fonts/type1/public/amsfonts/cm/cmbx8.pfb><C:/Users/jlara/AppData/Local/Progr
+ams/MiKTeX/fonts/type1/public/amsfonts/cm/cmbx9.pfb><C:/Users/jlara/AppData/Loc
+al/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmcsc10.pfb><C:/Users/jlara/A
+ppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi8.pfb><C:/Users
+/jlara/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr10.pfb><
+C:/Users/jlara/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr
+12.pfb><C:/Users/jlara/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfont
+s/cm/cmr17.pfb><C:/Users/jlara/AppData/Local/Programs/MiKTeX/fonts/type1/public
+/amsfonts/cm/cmr5.pfb><C:/Users/jlara/AppData/Local/Programs/MiKTeX/fonts/type1
+/public/amsfonts/cm/cmr6.pfb><C:/Users/jlara/AppData/Local/Programs/MiKTeX/font
+s/type1/public/amsfonts/cm/cmr7.pfb><C:/Users/jlara/AppData/Local/Programs/MiKT
+eX/fonts/type1/public/amsfonts/cm/cmr8.pfb><C:/Users/jlara/AppData/Local/Progra
+ms/MiKTeX/fonts/type1/public/amsfonts/cm/cmsl10.pfb><C:/Users/jlara/AppData/Loc
+al/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy8.pfb><C:/Users/jlara/App
+Data/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmti12.pfb><C:/Users/
+jlara/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmtt8.pfb>
+Output written on TFG.pdf (79 pages, 2972567 bytes).
+PDF statistics:
+ 820 PDF objects out of 1000 (max. 8388607)
+ 206 named destinations out of 1000 (max. 500000)
+ 494 words of extra memory for PDF output out of 10000 (max. 10000000)
+
