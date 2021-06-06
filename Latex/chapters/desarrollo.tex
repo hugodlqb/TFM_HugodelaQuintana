@@ -169,10 +169,6 @@ Valores de lectura: estos parámetros son utilizados para hacer lecturas de los 
 \item Escenas: estas direcciones tienen una lógica similar a la de los centralizados, con la salvedad de que estos permiten enviar diferentes órdenes a los mecanismos de manera simultánea. Una escena que se ha programado en este proyecto, recibe el nombre de “Salir de casa”, y en ella se ejecuta el apagado de todas las luces de la vivienda, se bajan todas las persianas y se desactiva el recuperador de CO\textsubscript{2}.
 \end{itemize} 
 
-\section{Seccion (buscar nombre en gira app)}
-
-rollo seccion iluminacion, seccion alarmas, perianas, clima..
-
 \section{Programación de los mecanismos}
 
 Una vez explicada la base de trabajo de la programación, en este capítulo se pasará a comentar el linkado que se ha establecido entre los diferentes objetos de comunicación de los módulos instalados en la vivienda y las direcciones de grupo creadas y comentadas con anterioridad. También se detallarán los bloques lógicos creados para satisfacer los requisitos del cliente en aquellas ocasiones que los objetos de comunicación predefinidos de los módulos no llegan al alcance requerido de precisión o funcionalidad, y por tanto, es necesaria la implementación de una programación complementaria. Los bloques lógicos son una variedad de funciones del tipo \textit {drag and drop} que ofrece el servidor X1 y permite crear entramados complejos de pautas de funcionamiento mediante la asociación de \textit {“cajas lógicas”} que manipula, transforma o asocia direcciones de grupo. En esta sección se explicará en detalle también la lógica aplicada durante el diseño de estos bloques lógicos.
@@ -235,7 +231,7 @@ En último lugar, la señal de ON/OFF volverá a ser utilizada, siendo en primer
 Con la unión de los paquetes lógicos 2, 3 y 4 lo que se logra es hacer un envío cíclico y ordenado de los valores de dimming de subida y bajada de tensión, que serán alternados a través del uso de los paquetes 2 y 3, que enviarán alternativamente los valores “1” y “9” correspondientes con la orden de bajada y subida respectivamente, mientras que el valor “0” será enviado siempre a la salida de DIMMING cuando se produzca en la entrada ON/OFF, simplemente para que esa dirección de grupo actualice su estado de cara al próximo proceso de regulación de esa lámpara o bien para actualizar su estado en las interfaces gráficas que utiliza el cliente.
  \begin{center}
 \begin{figure}[H]
-\includegraphics[width=1.15\textwidth]{figures/log_dimm_b5.png}   
+\includegraphics[width=0.95\textwidth]{figures/log_dimm_b5.png}   
 \caption{Módulo lógico DIMMER: bloque 5}
 \label{fig:log_dimm_b5}
 \end{figure}
@@ -259,12 +255,8 @@ Finalmente, la programación de una ventana o persiana controlada domóticamente
 \end{figure}
 \end{center}
 
+\item  \textbf{Sistemas sensoriales:}
+\item  \textbf{Control de consumos:}
+\item  \textbf{Escenas y centralizados:}
+\item  \textbf{Sistemas de visualización Y protocolo de comunicación:}
 \end{itemize}
-\section{Protocolo de comunicación}
-
-
-
-
-\section{Servidor}
-
-explicaren detalle que haran los componentes, con que equipos se cuentan (rollo suelo radiante, fancoil...)
