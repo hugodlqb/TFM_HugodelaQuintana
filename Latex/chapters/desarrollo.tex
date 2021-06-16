@@ -292,7 +292,11 @@ El detector de humo también poseerá una programación sencilla, tal y como pod
 Por último, los sensores de inundación y ventana abierta, se han programado trabajando con la detección de las variaciones de flanco, tal y como lo haría un módulo de entradas corriente. Enviarán las señales de alarma una vez que o bien el agua o el cierre magnético logren cerrar el circuito y generen un flanco de subida sobre alguna de las entradas de sus respectivos módulos. Podemos ver su programación en las Imágenes \ref{fig:prog_inun} y \ref{fig:prog_vent}.
 
 \subsection{Recuperador de CO\textsubscript{2}}
+
+
 \subsection{Control de consumos}
+
+
 \subsection{Escenas y centralizados}Como ya se comentó en la Sección \ref{sec:dir_grup}, las escenas y centralizados se tratan de direcciones de grupos que permiten ejecutar una rutina de eventos atacando un único objeto de comunicación, teniendo como principal diferencia que las escenas permitían enviar parámetros con valores distintos tanto en valor como en tipado, mientras que los centralizados no, siendo enviado exactamente el mismo valor a todas las direcciones asociadas. En añadido, las escenas tendrán una programación diferente a la que poseerán los centralizados, los cuales solo deben tener las direcciones de grupo linkadas. Las escenas funcionan enviando un número del 1 al 255 indicando así cuál de todas será ejecutada, siendo cada uno de estos números la identificación utilizada para escogerlas. Por tanto, cada salida del actuador que se desee que participe en una escena, deberá tener activada la opción de generar escenas, tener programada su acción durante la ejecución de la escena y atribuido su número identificador. A continuación se exponen algunas de estas direcciones de grupo especiales:
 \begin{itemize}
 \item Salir de casa: en esta escena se han enlazado señales de persianas y luminarias, enviando una señal de OFF a todas las salidas de los actuadores conectados a una bombilla y una señal de DOWN a las salidas asociadas a las persianas. Será utilizada para que el cliente pueda salir de su casa con la convicción de no haberse dejado ninguna de las luces encendidas y sienta cierto tipo de seguridad al saber todas las persianas han sido bajadas, sobre todo en viviendas de tipo unifamiliar.
