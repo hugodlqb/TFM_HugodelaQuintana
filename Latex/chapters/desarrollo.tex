@@ -1,6 +1,6 @@
 \chapter{Desarrollo del proyecto}
 
-En este capítulo se describe el desarrollo del proyecto
+En este capítulo se realizará una descripción detallada del desarrollo que ha seguido este proceso una vez finalizada sus fases de diseño y validación por parte del cliente. Principalmente, relatara los procesos seguidos a la hora de la programación del sistema para lograr conseguir que su funcionamiento sea el pactado en la fase anterior, dándole especial importancia a la preparación de las variables y parámetros que gestionarán y controlarán todos los procesos, tanto físicos como lógicos, que sucederán durante el uso habitual de los equipos instalados en la vivienda; y a la programación realizada sobre los mecanismos para que el sistema responda correctamente a los valores y variaciones de estos parámetros y variables.
 
 \section{Direcciones de grupo y objetos de comunicación}
 \label{sec:dir_grup}
@@ -23,8 +23,7 @@ Si ahora se pulsase el pulsador P1, este escribiría un 1 en el objeto de comuni
 \label{fig:diag_flags}
 \end{figure}
 \end{center}
-Como se comentaba al comienzo de este capítulo, los objetos de comunicación de los mecanismos se comunican entre sí al linkarse a la misma dirección de grupo, como es el caso de los LEDs de los pulsadores y el icono de la pantalla, que están linkados a la dirección de grupo denominada textit {ON/OFF Luz Cocina}. Estas direcciones han de ser creadas por el programador en función de las tareas y acciones que desee realizar en la instalación. Para una mayor organización, el software ETS5 ofrece tres niveles de dirección de grupo: el principal, que da información acerca de que sección se controla, uno intermedio, que anuncia que funcionalidad se ejecuta, y finalmente las propias direcciones de grupo, que llevarán el nombre concreto del efector y la función que utiliza. Siguiendo con el ejemplo de la Imagen \ref{fig:diag_flags},  el nivel superior llevaría el nombre de textit {Iluminación} con el número 1, el intermedio textit {ON/OFF} con la identificación 1/1, y finalmente, y tal como se comentó, la dirección de grupo será nombrada como textit {ON/OFF Luz Cocina}, con tipificación 1/1/1. De esta manera, se establece una jerarquía organizativa que permite a los instaladores o incluso programadores futuros que modifiquen el proyecto, localizar las direcciones de grupo de manera más intuitiva y sencilla.
-\newpage
+Como se comentaba al comienzo de este capítulo, los objetos de comunicación de los mecanismos se comunican entre sí al linkarse a la misma dirección de grupo, como es el caso de los LEDs de los pulsadores y el icono de la pantalla, que están linkados a la dirección de grupo denominada textit {ON/OFF Luz Cocina}. Estas direcciones han de ser creadas por el programador en función de las tareas y acciones que desee realizar en la instalación. Para una mayor organización, el software ETS5 ofrece tres niveles de dirección de grupo: el principal, que da información acerca de que sección se controla, uno intermedio, que anuncia que funcionalidad se ejecuta, y finalmente las propias direcciones de grupo, que llevarán el nombre concreto del efector y la función que utiliza. Siguiendo con el ejemplo de la Imagen \ref{fig:diag_flags},  el nivel superior llevaría el nombre de textit {Iluminación} con el número 1, el intermedio textit {ON/OFF} con la identificación 1/1, y finalmente, y tal como se comentó, la dirección de grupo será nombrada como textit {ON/OFF Luz Cocina}, con tipificación 1/1/1. De esta manera, se establece una jerarquía organizativa que permite a los instaladores o incluso programadores futuros que modifiquen el proyecto, localizar las direcciones de grupo de manera más intuitiva y sencilla.\\\\
 En este proyecto se ha creado la siguiente jerarquía de organización para contener todos los objetos de comunicación que van a ser utilizados durante el funcionamiento de la instalación:
 
 \begin{multicols}{2} 
@@ -116,6 +115,8 @@ En este proyecto se ha creado la siguiente jerarquía de organización para cont
 \end{flushright} 
 \end{multicols} 
 
+\newpage
+
 \begin{multicols}{2} 
 \begin{flushleft} 
 \begin{itemize}
@@ -176,25 +177,25 @@ Una vez explicada la base de trabajo de la programación, en este capítulo se p
 \subsection{Iluminación} Esta sección entrelazará los pulsadores domóticos con los actuadores, tanto binarios como reguladores, a través del bus KNX para poder actuar sobre el sistema de iluminación de la vivienda a través de la dirección de grupo ON/OFF. A las teclas de los pulsadores que se encargarán del apagado, encendido y regulación de luminarias, se les ha otorgado la funcionalidad de conmutación con aplicación de tipo \textit {“switch”}, permitiendo así el envío del valor binario adecuado (contrario al existente en el momento) al accionar el pulsador. Por otro lado, se han programado ambas clases de actuadores para que en caso de caída de tensión en el bus, recuperen de su \textit {stack} de memoria el último valor en el que se encontraban las luces previamente. \\\\
 El funcionamiento básico de esta sección hace de su programación una tarea sencilla y sin ningún tipo de complejidad, pero por solicitud del cliente ha sido necesario implementar un complejo bloque lógico para lograr controlar las lámparas dimmeables desde el único punto de los pulsadores KNX. El funcionamiento esperado sigue las siguientes pautas: con una pulsación larga, la lámpara comienza a aumentar su intensidad lumínica si la acción durante la última pulsación larga había sido reducir el valor lumínico. Por el contrario, si la última acción había sido aumentar de tensión, al realizar una pulsación larga, debe comenzar a descender su intensidad. \\
 Por otro lado, y en cuanto a la pulsación corta, si se da mientras no se esté ejecutando ninguna regulación: si la luz se encuentra encendida, pasará a estar apagada, mientras que si se encontraba apagada, regulará de manera automática y progresiva la intensidad lumínica hasta el valor guardado en el \textit {stack} de memoria en el momento de parar la regulación.
-\newpage
+
  El diagrama de bloques diseñados en el módulo X1 es el siguiente:
- \begin{center}
+\begin{center}
 \begin{figure}[H]
 \includegraphics[width=1.05\textwidth]{figures/log_dimm_izq.png}   
 \caption{Módulo lógico DIMMER (1ª Parte)}
 \label{fig:log_dimm_izq}
 \end{figure}
 \end{center}
- \begin{center}
+
+\begin{center}
 \begin{figure}[H]
 \includegraphics[width=1.05\textwidth]{figures/log_dimm_der.png}   
 \caption{Módulo lógico DIMMER (2ª Parte)}
 \label{fig:log_dimm_der}
 \end{figure}
 \end{center}
-En él podemos encontrar dos entradas de datos: la señal de ON/OFF de la luminaria y la orden de DIMMER, que atacarán a sus homologos de las salidas, una vez realizadas todas las secuencias del bloque lógico, que a continuación será descrito: 
-\newpage
-Por un lado, la señal de ON/OFF se envía a un bloque lógico capaz de diferir entre una pulsación larga de una corta, preestableciendo el valor que las diferencia durante su programación, en este caso, de un segundo. Este bloque ha sido programado para que únicamente se obtenga una señal de salida de valor “1” cuando la pulsación que es detectada es breve, y es enviada al disparador de un bloque Generador de valores. Este bloque tiene la función de que en el momento que recibe un “1” por su puerto “Disparador”, envía el valor recibido por su puerto “Valor”, que en este caso, es la propia señal de ON/OFF de la entrada. Este valor será recibido por un bloque de salida, que es el encargado de modificar el valor de la propia dirección de grupo ON/OFF de la lámpara.
+
+En él podemos encontrar dos entradas de datos: la señal de ON/OFF de la luminaria y la orden de DIMMER, que atacarán a sus homologos de las salidas, una vez realizadas todas las secuencias del bloque lógico, que a continuación será descrito: por un lado, la señal de ON/OFF se envía a un bloque lógico capaz de diferir entre una pulsación larga de una corta, preestableciendo el valor que las diferencia durante su programación, en este caso, de un segundo. Este bloque ha sido programado para que únicamente se obtenga una señal de salida de valor “1” cuando la pulsación que es detectada es breve, y es enviada al disparador de un bloque Generador de valores. Este bloque tiene la función de que en el momento que recibe un “1” por su puerto “Disparador”, envía el valor recibido por su puerto “Valor”, que en este caso, es la propia señal de ON/OFF de la entrada. Este valor será recibido por un bloque de salida, que es el encargado de modificar el valor de la propia dirección de grupo ON/OFF de la lámpara.
 \begin{center}
 \begin{figure}[H]
 \includegraphics[width=1.15\textwidth]{figures/log_dimm_b1.png}   
@@ -203,7 +204,8 @@ Por un lado, la señal de ON/OFF se envía a un bloque lógico capaz de diferir 
 \end{figure}
 \end{center}
 Con estos módulos lo que se logra simular es el encendido y apagado de la bombilla regulada desde el actuador de regulación al hacer una pulsación corta sobre el pulsador domótico.\\\\
-A continuación, encontramos la segunda entrada, en este caso apuntando hacia la dirección de grupo DIMMING, la cual, en primera instancia, entrará a un bloque lógico Comparador. Este bloque se ha configurado para que su salida sea un “1” cuando el valor de entrada sea mayor que 0. Tanto para el valor de subida como de bajada, el valor de este telegrama será mayor de 0, respectivamente y en valores binarios, 101 y 001. En estos dos  casos, la salida del comparador será un “1”, que irá direccionado al puerto “Disparador” de otro bloque Generador de valores, cuyo valor de salida al activarse será el propio valor de la entrada de DIMMER. \\ Este valor será enviado a dos bloques Comparadores, uno programado para identificar unos y otro para nueves, cuyas salidas irán invertidas y direccionadas a la entrada de activación de un módulo de Bloqueo cada una. Estos módulos tienen un funcionamiento bastante sencillo e intuitivo: actúan como de buffer de datos, que entran por su puerto “Entrada”, siempre que reciban un “0” por su puerto “Activo”, puesto que si por el contrario reciben un “1”, bloquearan el envío de ese valor. 
+A continuación, encontramos la segunda entrada, en este caso apuntando hacia la dirección de grupo DIMMING, la cual, en primera instancia, entrará a un bloque lógico Comparador. Este bloque se ha configurado para que su salida sea un “1” cuando el valor de entrada sea mayor que 0. Tanto para el valor de subida como de bajada, el valor de este telegrama será mayor de 0, respectivamente y en valores binarios, 101 y 001. En estos dos  casos, la salida del comparador será un “1”, que irá direccionado al puerto “Disparador” de otro bloque Generador de valores, cuyo valor de salida al activarse será el propio valor de la entrada de DIMMER. 
+\\\\ Este valor será enviado a dos bloques Comparadores, uno programado para identificar unos y otro para nueves, cuyas salidas irán invertidas y direccionadas a la entrada de activación de un módulo de Bloqueo cada una. Estos módulos tienen un funcionamiento bastante sencillo e intuitivo: actúan como de buffer de datos, que entran por su puerto “Entrada”, siempre que reciban un “0” por su puerto “Activo”, puesto que si por el contrario reciben un “1”, bloquearan el envío de ese valor. 
  \begin{center}
 \begin{figure}[H]
 \includegraphics[width=1.15\textwidth]{figures/log_dimm_b2.png}   
@@ -240,7 +242,10 @@ En la Imagen \ref{fig:prog_dim} del Anexo~\ref{aped.B} se muestra los linkados n
 \subsection{Persianas/ventanas}Como ya se comentó en la sección \ref{sec:dir_grup}, las persianas y ventanas harán uso de 4 direcciones de grupo: UP/DOWN, STEP/STOP, VALOR y STD VALOR, que se encuentran linkadas entre los pulsadores y el actuador a través del bus. Las salidas del actuador destinadas a realizar esta función de regulación, han sido configuradas con el modo persiana, del tipo persiana enrollable o toldo. Una vez aplicado este modo de funcionamiento a las salidas del actuador, se permite el ajuste de varios de los parámetros, como es el caso de los tiempos de actuación de cada persiana: se deberá cronometrar los tiempos de bajada y subida de estas, para que así, el sistema sea capaz de enviar un valor porcentual del nivel de bajada en función del tiempo que se haya encontrado en funcionamiento, ya que el motor de la persiana no cuenta con ningún control de posición absoluto en su encoder o sistema de cuantificación de movimiento. Con la intención de dar un ajuste más fino, se implementa un parámetro que permite añadir un tiempo adicional al tiempo de subida de la persiana, para así compensar las diferencias de tiempo de recorrido que pueden encontrarse debido al elevado peso de las lamas que componen las persianas. Estas salidas han sido programadas para enviar una orden de paro tras la caída de tensión del bus, con la intención de evitar daños en su estructura, que podrían venir causados por el desconocimiento de la posición real de las persianas por parte del sistema y hacer que estas se descuelguen o se salgan de sus rieles en el caso de que los finales de carrera no se encuentren operativos o bien ajustados.\\\\
 Finalmente, la programación de una ventana o persiana controlada domóticamente se vería tal y como se muestra en la siguiente Imagen \ref{fig:prog_dim} del Anexo~\ref{aped.B}, donde se aprecia una captura de pantalla de la programación en el software ETS5.
 
-\subsection{Climatización}Esta sección se trata de la que posee una mayor complejidad a la hora de programar debido a que debe integrar los numerosos módulos que la componen, y por ello, se ha creado el siguiente esquema simplificado para facilitar su comprensión en lugar de realizar una captura de pantalla a los linkados en el ETS5:
+\vspace{2cm}
+\subsection{Climatización}Esta sección se trata de la que posee una mayor complejidad a la hora de programar debido a que debe integrar los numerosos módulos que la componen, y por ello, se ha creado el siguiente esquema simplificado para facilitar su comprensión en lugar de realizar una captura de pantalla a los linkados en el ETS5: a la izquierda de la Imagen \ref{fig:prog_termost}, aparece uno de los termostatos a instalar en la vivienda. En su interior podemos encontrar su módulo de procesamiento, por el cual recibirá y retransmitirá todas las variables que componen el sistema de climatización enviadas desde la aplicación móvil, el X1 o desde sus propios pulsadores accionados por el cliente. 
+\newpage
+
  \begin{center}
 \begin{figure}[H]
 \includegraphics[width=1.15\textwidth]{figures/prog_termost.png}   
@@ -248,7 +253,7 @@ Finalmente, la programación de una ventana o persiana controlada domóticamente
 \label{fig:prog_termost}
 \end{figure}
 \end{center}
-A la izquierda de la Imagen \ref{fig:prog_termost}, aparece uno de los termostatos a instalar en la vivienda. En su interior podemos encontrar su módulo de procesamiento, por el cual recibirá y retransmitirá todas las variables que componen el sistema de climatización enviadas desde la aplicación móvil, el X1 o desde sus propios pulsadores accionados por el cliente. \\Las variables que maneja serán las siguientes: 
+Las variables que maneja serán las siguientes: 
 \begin{itemize}
 \item \textbf{Modo clima:} es el parámetro que indica al sistema si debe actuar controlando la temperatura de la vivienda en modo verano o generador de frio, o por el contrario, lo hará en modo invierno o generando calor. Tendrá un tamaño de 1 bit, asegurando así que el sistema no se encuentre en una situación de dualidad, pudiendo provocar errores o incluso el daño de los equipos de aerotermia. Será seleccionado por el usuario a través de la aplicación o del G1.
 \item \textbf{Temperatura real:} será el valor medido de la temperatura de la habitación por el termómetro interno del termostato instalado en ella. Tendrá un tamaño de 2 bytes.
