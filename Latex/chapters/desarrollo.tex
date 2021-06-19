@@ -223,21 +223,19 @@ Por otro lado, los valores que se envían una vez que estos módulos de Bloqueo 
 \end{figure}
 \end{center}
 En último lugar, la señal de ON/OFF volverá a ser utilizada, siendo en primer lugar por un bloque Convertidor de tipo, configurado para obtener a su salida un valor binario de esta entrada. Una vez convertido, este valor pasará a un bloque Comparador programado para  contrastar si el valor recibido es un “0”, y enviar un “1” al puerto disparador de un bloque Generador de valores, que enviará un cero a la salida de DIMMING una vez se dispare. 
- \begin{center}
 \begin{figure}[H]
-\includegraphics[width=1.15\textwidth]{figures/log_dimm_b4.png}   
+\centering
+\includegraphics[width=1.08\textwidth]{figures/log_dimm_b4.png}   
 \caption{Módulo lógico DIMMER: bloque 4}
 \label{fig:log_dimm_b4}
 \end{figure}
-\end{center}
 Con la unión de los paquetes lógicos 2, 3 y 4 lo que se logra es hacer un envío cíclico y ordenado de los valores de dimming de subida y bajada de tensión, que serán alternados a través del uso de los paquetes 2 y 3, que enviarán alternativamente los valores “1” y “9” correspondientes con la orden de bajada y subida respectivamente, mientras que el valor “0” será enviado siempre a la salida de DIMMING cuando se produzca en la entrada ON/OFF, simplemente para que esa dirección de grupo actualice su estado de cara al próximo proceso de regulación de esa lámpara o bien para actualizar su estado en las interfaces gráficas que utiliza el cliente.
- \begin{center}
 \begin{figure}[H]
-\includegraphics[width=0.95\textwidth]{figures/log_dimm_b5.png}   
+\centering
+\includegraphics[width=0.75\textwidth]{figures/log_dimm_b5.png}   
 \caption{Módulo lógico DIMMER: bloque 5}
 \label{fig:log_dimm_b5}
 \end{figure}
-\end{center}
 En la Imagen \ref{fig:prog_dim} del Anexo~\ref{aped.B} se muestra los linkados necesarios en las direcciones de grupo de una luminaria de tipo regulable, ya que engloba todas las variables utilizados en una de clase ON/OFF.
 
 \subsection{Persianas/ventanas}Como ya se comentó en la sección \ref{sec:dir_grup}, las persianas y ventanas harán uso de 4 direcciones de grupo: UP/DOWN, STEP/STOP, VALOR y STD VALOR, que se encuentran linkadas entre los pulsadores y el actuador a través del bus. Las salidas del actuador destinadas a realizar esta función de regulación, han sido configuradas con el modo persiana, del tipo persiana enrollable o toldo. Una vez aplicado este modo de funcionamiento a las salidas del actuador, se permite el ajuste de varios de los parámetros, como es el caso de los tiempos de actuación de cada persiana: se deberá cronometrar los tiempos de bajada y subida de estas, para que así, el sistema sea capaz de enviar un valor porcentual del nivel de bajada en función del tiempo que se haya encontrado en funcionamiento, ya que el motor de la persiana no cuenta con ningún control de posición absoluto en su encoder o sistema de cuantificación de movimiento. Con la intención de dar un ajuste más fino, se implementa un parámetro que permite añadir un tiempo adicional al tiempo de subida de la persiana, para así compensar las diferencias de tiempo de recorrido que pueden encontrarse debido al elevado peso de las lamas que componen las persianas. Estas salidas han sido programadas para enviar una orden de paro tras la caída de tensión del bus, con la intención de evitar daños en su estructura, que podrían venir causados por el desconocimiento de la posición real de las persianas por parte del sistema y hacer que estas se descuelguen o se salgan de sus rieles en el caso de que los finales de carrera no se encuentren operativos o bien ajustados.\\\\
@@ -298,6 +296,36 @@ El detector de humo también poseerá una programación sencilla, tal y como pod
 Por último, los sensores de inundación y ventana abierta, se han programado trabajando con la detección de las variaciones de flanco, tal y como lo haría un módulo de entradas corriente. Enviarán las señales de alarma una vez que o bien el agua o el cierre magnético logren cerrar el circuito y generen un flanco de subida sobre alguna de las entradas de sus respectivos módulos. Podemos ver su programación en las Imágenes \ref{fig:prog_inun} y \ref{fig:prog_vent}.
 
 \subsection{Recuperador de CO\textsubscript{2}}
+Para esta sección, al igual que sucedía con la programación de las luminarias de tipo Dimmer, será necesaria una programación extra en el módulo X1 para poder implementar todos los requisitos impuestos por el cliente, y que se verán a continuación en detalle el desarrollo de la lógica de su programación:\\\\
+En primer lugar aparecen las 5 señales de entrada que tendrán la capacidad de mantener el sistema recuperador encendido a la máxima potencia mientras se mantengan activas, más un tiempo añadido extra de 10 minutos. Estas señales se encuentran apuntando desde la dirección de grupo del ON/OFF de las cuatro luminarias situadas en los cuartos de baños, y desde la tecla de un pulsador que se encuentra instalado en uno de los pasillos. Todas ellas estarán direccionadas a los puertos “Entrada” de un bloque “Puerta OR”. La salida de este bloque se dirigirá hacia un bloque “Detector de flancos” programado para que su salida de detección de flanco descendente envié una señal a un bloque “Luz de escalera”, el cual tendrá la misión de mantener el envío de un 1 por su puerto “Salida” durante 10 minutos. Esta señal junto con un bloque “Entrada” activado al detectar más de 1500 ppm y la propia salida de la puerta OR, se dirigirán a un segundo bloque “Puerta OR”.
+\begin{figure}[H]
+\centering
+\includegraphics[width=1.15\textwidth]{figures/log_co2_b1.png}   
+\caption{Módulo lógico Recuperador de CO\textsubscript{2}: bloque 1}
+\label{fig:log_co2_b1}
+\end{figure}
+Con esto se logra que esta última puerta OR envíe un 1 a uno de los puertos “Entrada” de un bloque “Puerta AND”. El otro puerto de este bloque será atacado desde la dirección de grupo que indica si el sistema de recuperación de CO\textsubscript{2} debe estar encendido o no. Si estas dos señales binarias tienen un valor de 1, se enviará una señal de activación a las direcciones de grupo encargadas de dar la orden de cierre al relé conectado del cable de la máquina que activa la velocidad máxima. Una señal invertida atacará al relé de velocidad media, haciendo que este se desconecte.
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.85\textwidth]{figures/log_co2_b2.png}   
+\caption{Módulo lógico Recuperador de CO\textsubscript{2}: bloque 2}
+\label{fig:log_co2_b2}
+\end{figure}
+La misma puerta OR invertida se direccionará,  junto con la señal ON/FF del sistema y la de detección de 1000 ppm, a un bloque “Puerta AND” cuya salida se encuentra conectada a la dirección que conecta la velocidad media. Lo logrado con este bloque es que si la velocidad máxima se encuentra activada, no se podrá activar la velocidad media aunque se produzca la detección del límite de CO\textsubscript{2}.
+\begin{figure}[H]
+\centering
+\includegraphics[width=1.15\textwidth]{figures/log_co2_b3.png}   
+\caption{Módulo lógico Recuperador de CO\textsubscript{2}: bloque 3}
+\label{fig:log_co2_b3}
+\end{figure}
+En la Imagen \ref{fig:log_co2_b2} también se encuentra el bloque “Salida” que ataca a la dirección “VEL FAN 1”, y se encuentra conectada a la señal de entrada del ON/OFF del sistema de recuperación. Con este funcionamiento se logra que las salidas del actuador binario que lo controla, se comporte de la manera determinada en la Tablas \ref{tab:conex_co2}.\\\\
+Con la intención de controlar el comportamiento del sistema a través de la pantalla o la aplicación móvil y no incurrir en ningún estado que pueda dañar el quipo, como la conexión simultanea de la velocidad media y alta, se han diseñado tres bloques lógicos. Su función será la de detectar cuando a una de estas salidas se le solicita su conexión, y por tanto, se deben desconectar las otras al detectar flancos ascendentes, por lo que se enviará el valor negado de estos bloques "Detector de flancos".
+\begin{figure}[H]
+\centering
+\includegraphics[width=1.15\textwidth]{figures/log_co2_b4.png}   
+\caption{Módulo lógico Recuperador de CO\textsubscript{2}: bloque 4}
+\label{fig:log_co2_b4}
+\end{figure}
 
 
 \subsection{Control de consumos}

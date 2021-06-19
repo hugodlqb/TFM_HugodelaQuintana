@@ -380,8 +380,10 @@ Otro dato relevante se presenta en el consumo total, donde aparecen dos valores:
 \section{Secciones y funcionalidad}
 
 \subsection{Iluminación}En esta sección se agrupan todos los elementos de la vivienda que comparten el mismo desempeño: iluminar, independientemente de si se tratan de luminarias del tipo ON/OFF o del tipo regulable. Cada punto de luz se controlará de manera independiente del resto de puntos, y se podrá hacer desde uno o más de los pulsadores instalados, desde la pantalla del G1 o desde la aplicación del móvil. Se han habilitado mediante programación los llamados servicios centralizados, permitiendo así controlar conjuntos de luminarias como por ejemplo, el centralizado general, que permite apagar todas las luces de la vivienda, permitiendo así al cliente poder salir de la vivienda con la seguridad de no estar malgastando energía, ahorrando de esta manera en su factura eléctrica. \\\\ Para esta sección también se ha hecho uso de los sistemas sensoriales de movimiento, presencia y luminosidad: la luminaria del trastero, las de los pasillos y el hall se encienden de manera automática al detectar movimiento en ellos; en el salón, sin embargo, se ha utilizado un detector de presencia al no tratarse de una zona de paso, sino de permanecer en ella sin reealizar grandes movimientos, que en combinación con la cuantificación de luminosidad en la estancia, enciende de manera automática la lámpara si detecta a alguna persona y regula su intensidad luminica en función del valor de luminosidad sensado.\\
-\subsection{Recuperador de CO\textsubscript{2}}Esta sección contará con un detector de partículas de CO\textsubscript{2} que activará la señal para dar la orden a un sistema de extracción y renovación de aire mediante un sistema de ventiladores. De manera habitual, el sistema de recuperación debe permanecer en funcionamiento con el menor nivel de ventilación activado, y deberá ser apagado y reactivado por el cliente de manera manual mediante un switch habilitado tanto en la G1 como en la aplicación del móvil. \\ 
+
+\subsection{Recuperador de CO\textsubscript{2}}Esta sección contará con un detector de partículas de CO\textsubscript{2} que activará la señal para dar la orden a un sistema de extracción y renovación de aire mediante un sistema de ventiladores. De manera habitual, el sistema de recuperación debe permanecer en funcionamiento con el menor nivel de ventilación activado, y deberá ser apagado y reactivado por el cliente de manera manual mediante un switch habilitado tanto en la G1 como en la aplicación del móvil. \\\\ 
 Si el sistema se encuentra operativo, el sensor lanzará señales de activación de los diferentes niveles de velocidad de los ventiladores en función de la cantidad de partículas detectadas. Concretamente, se han programado tres límites: el primero de ellos, cuando se detectan entre 500 y 1000 partículas de CO\textsubscript{2} por millón analizadas, un segundo limite que activa el siguiente nivel de velocidad de los ventiladores cuando detecta entre 1000 y 1500 partículas por millón, y finalmente el tercer limite, que activa la máxima velocidad al detectar una cantidad superior a las 1500 partículas por millón. Por añadidura, al activar cualquier luz de alguno de los baños, el ventilador entrará en velocidad máxima durante 10 minutos, independientemente de los valores sensados, al igual que al accionar una de las teclas de los pulsadores, que ha sido programada para lanzar esta función de recuperación.\\
+
 \subsection{Ventanas, persianas y proyector}Desde esta sección se efectuara un control sobre los motores embebidos en las cajas de las persianas y en las ventanas. La programación desarrollada permitirá al usuario el cierre o la apertura total del elemento a controlar, así como su posicionamiento en un lugar concreto de su recorrido en función de un porcentaje de su tiempo total de apertura.\\
 \subsection{Seguridad ante incendios }Esta sección contará con detectores de humo instalados en diferentes habitaciones de la vivienda, que una vez activados, enviarán una señal de activación a la sirena de alarma y cortarán el suministro de gas mediante el cierre de la electroválvula. Esta alarma enviará una notificación tipo Push a los dispositivos móviles conectados con la instalación, permitiendo la desactivación de la señal acústica, manteniendo el cierre de la electroválvula.\\
 \subsection{Seguridad ante intrusiones }Para evitar en la medida de lo posible la irrupción de personas no deseadas en la vivienda, esta sección hace uso de los sensores de movimiento y presencia utilizados en la sección de iluminación, para lanzar la señal de alarma que activa la sirena y envía un mensaje Push a los dispositivos móviles conectados con la aplicación cuando se active el modo \textit{"Fuera de casa"} o \textit{"Vacaciones"}.\\
@@ -528,13 +530,47 @@ Por último, la pasarela para el control de la máquina de fancoil será instala
 
 \begin{itemize}
 \item \textbf{Módulos sensoriales} \\ \\
-Las conexiones, para el conjunto de módulos sensoriales que componen el sistema, al tratarse de módulos con la tecnología KNX integrada, serán bastante sencillas. Tanto el sensor de CO\textsubscript{2} como los sensores de movimiento y presencia irán directamente conectados al bus KNX, y desde ahí transmitirán al resto de elementos la información sensada. En cuanto al sensor de humo, lleva acoplado en su interior el módulo que le permite transmitir vía KNX tanto la alarma térmica como la de humo, por lo que tampoco tiene ningún otro cableado.\\
+Las conexiones, para el conjunto de módulos sensoriales que componen el sistema, al tratarse de módulos con la tecnología KNX integrada, serán bastante sencillas. Tanto el sensor de movimiento como el de presencia irán directamente conectados al bus KNX, y desde ahí transmitirán al resto de elementos la información sensada. En cuanto al sensor de humo, lleva acoplado en su interior el módulo que le permite transmitir vía KNX tanto la alarma térmica como la de humo, por lo que tampoco tiene ningún otro cableado.\\
 Por otro lado encontramos los sensores de inundación y de ventana abierta/cerrada, que de manera similar deben ir conectados a sendos módulos que permitan su comunicación a través del bus KNX. Al tratarse de sensores que funcionan cerrando un circuito eléctrico, su cableado consistirá simplemente en que uno de sus polos se encuentre conectado a la señal de referencia emitida por el módulo de entrada al que se encuentra conectado, y el otro extremo a la señal de alimentación, creando así la diferencia de potencial que indicaría que han sensado humedad o el cierre/apertura de una ventana.
 \end{itemize} 
 \begin{flushleft}
 \begin{figure}[H]
-\includegraphics[width=1.15\textwidth]{figures/conex_sensores.png}   
+\includegraphics[width=1.05\textwidth]{figures/conex_sensores.png}   
 \caption{Conexionado módulos sensoriales}
 \label{fig:conex_sensores}
 \end{figure}
 \end{flushleft}
+
+\newpage
+\begin{itemize}
+\item \textbf{Recuperador de CO\textsubscript{2}} \\ \\
+Para hacer funcionar correctamente la máquina encargada de generar flujo de aire a través del recuperador de CO\textsubscript{2} se debe seguir la siguiente tabla de conexionado con los relés:
+
+\begin{flushleft}
+\begin{table}[H]
+\centering
+\resizebox{7cm}{!} {
+\begin{tabular}{|c|c|c|c|}
+\hline
+\backslashbox{Cable}{Velocidad} & Baja & Media & Alta \\ \hline 
+\rule[0mm]{0mm}{4mm}
+In1 & 1 & 1 & 1 \\ \hline
+\rule[0mm]{0mm}{4mm}
+In2 & 0 & 1 & 0\\ \hline
+\rule[0mm]{0mm}{4mm}
+In3 & 0 & 0 & 1\\ \hline
+\end{tabular}
+}
+\caption{Funcionamiento del recuperador de CO\textsubscript{2}}
+\end{table}
+\label{tab:conex_co2}
+\end{flushleft} 
+Por lo tanto, el relé conectado a la In1 debe permanecer conectado en todo momento que el recuperador se encuentre en funcionamiento, acompañándose de la In 2 e In3 para activar la velocidad media o la alta, respectivamente. Estos niveles de velocidad podrán ser seleccionados por el cliente desde la pantalla del G1, o bien, desde la aplicación. las señales sensadas del detector así como el actuador de tipo binario que atacara a esas conexiones, estaran comunicados a traves del bus KNX.
+\end{itemize}
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=1.05\textwidth]{figures/conex_co2.png}   
+\caption{Conexionado módulos  recuperador de CO\textsubscript{2}}
+\label{fig:conex_co2}
+\end{figure}

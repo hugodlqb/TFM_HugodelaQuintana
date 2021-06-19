@@ -50,6 +50,7 @@ Una vez definidos los valores que se generarán al actuar sobre las teclas de lo
 Por lo tanto, cada vez que por esa dirección de grupo se reciba un valor, este se hará pasar por dos módulos de Bloqueo. Cada uno de estos bloques únicamente permitirá el paso de uno de los dos valores, permaneciendo inactivo uno de ellos cuando el otro se encuentra activo, en función del valor que tome esa dirección de grupo; ya que, como ya se comentó en la sección de programación (Capítulo \ref{sec:prog}), estos bloques solo permiten el envío del valor recibido por su puerto “Entrada” si recibe un 0 en su puerto “Activo”. Para lograr esto, uno de los módulos de Bloqueo tendrá previo a su puerto “Activo” un inversor, haciendo así que se desbloquee ante la entrada de valor 0. Con el fin de enviar el último valor recibido, los puertos “Entrada” de los módulos de Bloqueo vendrán precedidos de bloques “Retardador de telegramas”, que retrasarán la lectura de este valor un segundo respecto a los del puerto “Activo”. Por otro lado, y de manera independiente, se leen los valores que poseen las luces antes de la pulsación, invirtiendo su valor.
 
 \begin{figure}[H]
+\centering
 \includegraphics[width=1.15\textwidth]{figures/log_dimm_b21.png}  
 \caption{Módulo lógico DIMMER: bloque 1 (v2)}
 \label{fig:log_dimm_b21}
@@ -58,7 +59,8 @@ Por lo tanto, cada vez que por esa dirección de grupo se reciba un valor, este 
 Tanto la señal invertida del ON/OFF del estado de la lámpara como el valor de la salida del módulo “Bloqueo”, son dirigidos a un bloque “generador de valores”, respectivamente, a su puerto de “Valor” y al “Disparador” como se puede apreciar en la Imagen \ref{fig:log_dimm_b21}. 
 
 \begin{figure}[H]
-\includegraphics[width=0.95\textwidth]{figures/log_dimm_b22.png}  
+\centering
+\includegraphics[width=0.75\textwidth]{figures/log_dimm_b22.png}  
 \caption{Módulo lógico DIMMER: bloque 2 (v2)}
 \label{fig:log_dimm_b22}
 \end{figure}
@@ -77,7 +79,7 @@ Por otro lado, es necesaria la creación de dos direcciones de grupo específica
 Con la intención de evitar que el valor de la intensidad se salga de los límites impuestos de 10 y 100 y el sistema pueda entrar en algún tipo de conflicto o error, se ha diseñado una lógica que se encargará de corregir esta situación (Imagen \ref{fig:log_dimm_b24}). Contará con la señal \textit{Estado X} como entrada, atacando dos bloques comparadores: un “Mayor (>)” con un valor de 10 y otro “Menor (<)” con valor de 1 como números contra los que confrontarse. En el caso de que alguno de los dos bloques recibieran una señal que cumpliesen su premisa, enviaría un pulso a un bloque “Generador de valores” con el mismo valor, un 1 ó un 10 respectivamente, que sería enviado al bloque de salida direccionado a la propia dirección \textit{Estado X}. En las ocasiones que esto ocurriese, \textit{Estado X} actualizaría su valor y desencadenaría la ejecución de la rutina explicada anteriormente en la Imagen \ref{fig:log_dimm_b23}.
 
 \begin{figure}[H]
-\includegraphics[width=1.15\textwidth]{figures/log_dimm_b24.png}  
+\includegraphics[width=1.05\textwidth]{figures/log_dimm_b24.png}  
 \caption{Módulo lógico DIMMER: bloque 4 (v2)}
 \label{fig:log_dimm_b24}
 \end{figure}
@@ -85,7 +87,7 @@ Con la intención de evitar que el valor de la intensidad se salga de los límit
 Por último, se crea un bloque lógico para gestionar el control del valor de la propia variable \textit{Estado X}. Haciendo uso de la salida uno de los bloques “Comparador” de valor 12 ó -12, se activará un bloque “Luz de escalera”, cuyo propósito es mantener el envío de una señal tipo pulso durante un tiempo determinado. Debido a que los pulsadores han sido programados para enviar los telegramas en ciclos de 1 segundo, este bloque se ha programado para realizar el flanco de bajada una vez trascurridos 3 segundos desde su último activación, reiniciando la cuenta atrás cada vez que uno de los bloques “Comparador” lo dispara. Su puerto de salida se encuentra conectado a un bloque “Filtro” programado para no realizar ninguna acción al recibir un 1, pero al recibir un 0, deberá lanzar una señal que irá conmutando su valor de manera automática.  
 
 \begin{figure}[H]
-\includegraphics[width=1.15\textwidth]{figures/log_dimm_b25.png}  
+\includegraphics[width=1.05\textwidth]{figures/log_dimm_b25.png}  
 \caption{Módulo lógico DIMMER: bloque 5 (v2)}
 \label{fig:log_dimm_b25}
 \end{figure}
@@ -93,7 +95,8 @@ Por último, se crea un bloque lógico para gestionar el control del valor de la
 Estos valores que conmutan irán conectados a dos bloques “Generadores de valores””: pasa por un bloque “Inversor” para llegar al que tiene en su puerto “Valor” un -1 y de manera directa al que tiene un valor de 1. Cuando alguno de estos bloques se activa, envía su valor a un tercer bloque “Generador de valores”, a su puerto “Valor” y será disparado por uno de los bloques “Comparador” con valor 12 ó -12 del inicio.
 
 \begin{figure}[H]
-\includegraphics[width=1.15\textwidth]{figures/log_dimm_b26.png}  
+\centering
+\includegraphics[width=0.95\textwidth]{figures/log_dimm_b26.png}  
 \caption{Módulo lógico DIMMER: bloque 6 (v2)}
 \label{fig:log_dimm_b26}
 \end{figure}
