@@ -328,7 +328,21 @@ Con la intención de controlar el comportamiento del sistema a través de la pan
 \end{figure}
 
 
-\subsection{Control de consumos}
+\subsection{Control de consumos}Esta sección, a pesar de requerir también la implementación de módulos lógicos en el X1, estos serán más sencillos, ya que su objetivo es únicamente recoger el valor numérico de la lectura de los diversos contadores de consumos varios repartidos por los cuadros a través del bus KNX, y concatenarles un texto con las unidades de medida correctas y mostrarlos por pantalla una vez es pulsado el botón diseñado para ello en la pantalla o incluso desde la propia aplicación móvil. \\\\
+El módulo lógico de esta sección comienza con un bloque “Entrada” por el cual se recibe el valor numérico del consumo seleccionado. Este valor se dirigirá a dos bloques “Convertidor de tipo”: el primero de ellos se encuentra programado para convertir el valor de consumo en un 1 si es valor es diferente de 0, y mantener su valor si es un 0. Este valor binario se encuentra direccionado al puerto “Disparador” de un bloque “Generador de valores”, cuyo puerto “Valor” estará predefinido con la unidad de medida de ese consumo mediante caracteres alfanuméricos que crean una variable de tipo \textit{string}. Finalmente, esta variable será enviada a un bloque de retardo programado para retener el envío de este parámetro al siguiente bloque durante 1 segundo.
+\begin{figure}[H]
+\centering
+\includegraphics[width=1.15\textwidth]{figures/log_consu_b1.png}   
+\caption{Módulo lógico Control de consumos: bloque 1}
+\label{fig:log_consu_b1}
+\end{figure}
+El segundo bloque “Convertidor de tipo” anteriormente mencionado, que transforma el valor numérico de la medida en otra cadena de caracteres,  junto con el \textit{string} de la unidad de medida enviado con retraso, se dirigen hacia el puerto “Contenido” de un bloque lógico del tipo “Gira G1 notificaciones”, generándose una concatenación de ambos valores siguiendo la siguiente formula: \textit{string{valor numérico} +  string{unidad medida}}. Por último, este valor será enviado a un bloque “Salida” que ataca a la dirección de grupo encargada de mostrar en pantalla este valor cuando el usuario pulse el botón de refrescar estas medidas, que tendrá un bloque “Entrada” asociado que se encontrará direccionado al puerto “Disparador” del bloque generador de notificaciones.
+\begin{figure}[H]
+\centering
+\includegraphics[width=1.15\textwidth]{figures/log_consu_b2.png}   
+\caption{Módulo lógico Control de consumos: bloque 2}
+\label{fig:log_consu_b2}
+\end{figure}
 
 
 \subsection{Escenas y centralizados}Como ya se comentó en la Sección \ref{sec:dir_grup}, las escenas y centralizados se tratan de direcciones de grupos que permiten ejecutar una rutina de eventos atacando un único objeto de comunicación, teniendo como principal diferencia que las escenas permitían enviar parámetros con valores distintos tanto en valor como en tipado, mientras que los centralizados no, siendo enviado exactamente el mismo valor a todas las direcciones asociadas. En añadido, las escenas tendrán una programación diferente a la que poseerán los centralizados, los cuales solo deben tener las direcciones de grupo linkadas. Las escenas funcionan enviando un número del 1 al 255 indicando así cuál de todas será ejecutada, siendo cada uno de estos números la identificación utilizada para escogerlas. Por tanto, cada salida del actuador que se desee que participe en una escena, deberá tener activada la opción de generar escenas, tener programada su acción durante la ejecución de la escena y atribuido su número identificador. A continuación se exponen algunas de estas direcciones de grupo especiales:
@@ -339,4 +353,52 @@ Con la intención de controlar el comportamiento del sistema a través de la pan
 \item Cine: esta escena está especialmente diseñada para la habitación en la que se instalará un proyector, simulando crear una pequeña sala de cine en la vivienda. Esta escena permitirá ambientar la estancia con un único click, regulando la posición de las persianas y la intensidad de la luz, a la vez que se despliega la pantalla donde será proyectada la película.
 \end{itemize}
 
-\subsection{Sistemas de visualización y protocolo de comunicación}
+\subsection{Sistemas de visualización}Para esta sección se ha hecho uso de un software externo (\textit{“Gira Project Assistant”}) para la programación del módulo X1, que además de incluir en su interior todos los bloques lógicos mencionados anteriormente, también será el responsable de plasmar la interfaz diseñada en la pantalla del G1 y la aplicación. En este software se han incluido las siguientes carpetas de programación, con la intención de tener una organización robusta a la hora del diseño de la interfaz: 
+\begin{itemize}
+\item Edificio y dispositivos: incluirá detalladamente la ubicación de cada habitáculo y los elementos que en ella se encuentran.
+\item Editor de lógica: en esta carpeta se encontraran archivados todos los bloques lógicos que han sido diseñados y que serán ejecutados durante la actividad habitual de la vivienda.
+\item Relojes temporizadores: los puntos de datos incluidos en el X1, es decir, todos, se han programado para contener una función de temporizador que permite al usuario realizar actividades determinando una hora y fecha concreta, o bien la duración que desea que tenga dicha acción. Estas programaciones serán archivadas en esta carpeta.
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.65\textwidth]{figures/prog_x1_5.png}   
+\caption{Pantalla relojes temporizadores del X1}
+\label{fig:prog_x1_5}
+\end{figure}
+\item Escenarios: tal y como indica su nombre, en esta carpeta serán guardadas todas las escenas creadas y diseñadas para esta vivienda. Para ejecutarlas, se hará uso de bloques tipo “Favoritos” para que se muestren al comienzo de la ejecución de la aplicación, permitiendo un acceso más rápido y directo.
+\item Administración de usuarios: con la idea de la posible división de la casa y la entrada de dos grupos de personas desconocidas alquiladas, se han diseñado una serie de usuarios para que cada uno de ellos pueda acceder a la aplicación con una determinada cantidad de funciones desbloqueadas. En este caso, los dueños de la vivienda tendrán acceso tipo “Administrador”, con el que tienen acceso a todo el sistema, y tienen la posibilidad de limitar ese acceso al resto de usuarios. Esto resulta muy útil en el caso de que haya niños pequeños en la casa, y se quiera restringir su acceso al sistema de climatización, por ejemplo. 
+\item Puntos de datos: en esta carpeta estarán guardadas todas las direcciones de grupo del sistema y podrán modificarse sus características: si cuenta o no con un valor inicial y cuál es, a que dirección de grupo atacan y que estado notifica la lectura de las ordenes emitidas a través de los telegramas, el tipo, el tamaño de dato que manejan (1 bit, tipo switch, porcentaje, 2 bytes…) y los límites permitidos que alcancen sus valores.
+\item Categorías técnicas: pensado para el caso de que el cliente quisiera realizar un control por la sección a la que pertenece un elemento, en lugar de por la ubicación en la que se encuentra. Se han creado las siguientes categorías técnicas: 
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.45\textwidth]{figures/prog_x1_2.png}   
+\caption{Pantalla categorías técnicas del X1}
+\label{fig:prog_x1_2}
+\end{figure}
+\item Acceso remoto: en esta última carpeta se encuentra toda la información relacionada con la creación del servidor del X1 y su comunicación vía internet con la pantalla del G1 y la aplicación de manera remota e inalámbrica.
+\end{itemize}
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.95\textwidth]{figures/prog_x1_1.png}   
+\caption{Pantalla entorno de programación}
+\label{fig:prog_x1_1}
+\end{figure}
+\vspace{1.5cm}
+En primer lugar se ha creado una estructuración de la interfaz incluyendo todas las habitaciones que existen en la vivienda, permitiendo así, más adelante, que el cliente encuentre el dispositivo sobre el que quiere actuar de manera más rápida y cómoda. En las siguientes capturas de pantalla de la aplicación móvil, se muestran ejemplos del diseño que se ha aplicado a la visualización de la pantalla de inicio, que aparece tras el logueo pertinente del usuario, y también a la visualización que muestra cada una de las habitaciones:  
+\begin{figure}[H]
+\centering
+\includegraphics[width=1.00\textwidth]{figures/prog_x1_3.png}   
+\caption{Visualización de la aplicación}
+\label{fig:prog_x1_3}
+\end{figure}
+Dentro de cada carpeta que representa a una habitación, el usuario podrá encontrar todos los dispositivos instalados en ella y pueden ser controlados mediante el sistema domótico. Para poder ejercer acciones sobre los mecanismos instalados, se ha diseñado una interfaz propia para cada uno de ellos, mostrando al usuario los principales parámetros que podrá controlar de forma cómoda y de manera remota desde cualquier pantalla, como por ejemplo, el porcentaje de intensidad en las luces regulados, la temperatura de consigna del termostato de una de las salas o el control del modo de clima mediante un botón virtual, eligiendo así que sistema de climatización comienza a funcionar, entre otras funcionalidades enfocadas al cumplimiento de los requisitos del cliente. 
+\begin{figure}[H]
+\centering
+\includegraphics[width=1.15\textwidth]{figures/prog_x1_4.png}   
+\caption{Ejemplos de pantallas de control de elementos de la aplicación}
+\label{fig:prog_x1_4}
+\end{figure}
+
+Para que el X1 se encuentre apuntando a las direcciones correctas, este software permitirá volcar todas las direcciones de grupo creadas en el ETS5, para así tener la misma información que el resto del sistema y poder atacar correctamente a los mecanismos necesarios en cada acción. Una vez volcadas en el software, este nos permitirá relacionar estas direcciones de grupo entre sí, logrando que los estados se encuentren conectados a sus puntos de datos, y por tanto, actualizando la información del sistema ante cada variación de los parámetros del sistema.\\\\
+Como se puede observar, el diseño de la interfaz es bastante intuitivo y amable, por lo que cualquier persona con conocimientos básicos del manejo de un teléfono móvil podrá hacer uso de la domótica de la vivienda.\\\\
+Por otro lado, para otorgar la capacidad de poder actuar sobre el sistema de manera remota, se ha programado el módulo X1 como \textit{host}, otorgándole una dirección web y una contraseña de acceso. Para ello ha sido necesario reconfigurar el router de la vivienda, habilitando alguno de sus puertos con configuraciones tipo TCP y UDP y apuntando a dicha dirección web, permitiendo así la interconexión del X1 con los dispositivos móviles de los usuarios desde cualquier punto remoto en el que se cuente con acceso a internet. 

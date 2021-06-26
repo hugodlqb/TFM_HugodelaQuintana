@@ -4,7 +4,7 @@ En este capítulo se detallaran aquellos aspectos relacionados con la gestión d
 
 \section{Fases del proyecto}
 
-En el desarrollo del proyecto pueden diferenciarse siete fases. En primer lugar, se distingue una primera fase de obtención de los recursos que permitirán iniciar el proyecto. Por una parte, será necesario contar con el software ETS5 y con Gira Project Assistant. Asimismo, en esta primera fase deberán conocerse las especificaciones y los requisitos a los que debe atenerse, y en base a ello, la bibliografía que será necesaria para poder iniciar la segunda fase: el análisis teórico.\\\\
+En el desarrollo del proyecto pueden diferenciarse siete fases. En primer lugar, se distingue una primera fase de obtención de los recursos que permitirán iniciar el proyecto. Por una parte, será necesario contar con el software ETS5 y con Gira Project Assistant \cite{GiraApp:2021}. Asimismo, en esta primera fase deberán conocerse las especificaciones y los requisitos a los que debe atenerse, y en base a ello, la bibliografía que será necesaria para poder iniciar la segunda fase: el análisis teórico.\\\\
 Previo al diseño del proyecto, se hace necesario estudiar su viabilidad en base a las especificaciones definidas en la primera fase. De ser factible, se procederá al diseño de la solución y a la presentación de la misma al cliente, donde se expondrán las nuevas características o modificaciones del sistema. Tras el fin de la negociación y llegar a un acuerdo, se elaborará el presupuesto y se hará un pedido para obtener el hardware necesario que haya sido elegido en base a las especificaciones finales.\\\\
 Una vez recibido el material necesario, comenzará la fase de implementación en ETS5, con un desarrollo de la arquitectura de la vivienda que va a ser domotizada. En esta fase, se deberán elaborar los grupos de direcciones, así como buscar y descargar las bases de datos de los productos. Posteriormente, tras añadir los módulos de los dispositivos del sistema domótico, la implementación finalizará al  asignarles una dirección física a los mismos.\\\\
 En cuanto a la cuarta fase, el análisis del desarrollo, comenzará con la programación de los parámetros de los dispositivos y en linkado de sus objetos de comunicación. Posteriormente, será necesario crear las escenas y programar los módulos lógicos, para finalmente volcar la programación sobre los dispositivos físicos, y proceder a la instalación de los mismos en la vivienda.
@@ -112,17 +112,15 @@ link label node/.append style={below left=-2pt and 0pt},
 \label{tab:diagrama_gantt}
 \end{table}
 
-
-
+\newpage
 \section{Recursos y Material}
 
 Al tratarse de un proyecto enmarcado en el ámbito profesional, el proyecto contará con el apoyo de la empresa a la que se ha adjudicado la obra, por lo que se contará con profesionales con gran experiencia en el sector para realizar la instalación del sistema eléctrico y domótico en la vivienda. Para realizar esta parte, se contará con dos instaladores, mientras que durante la parte de puesta en marcha y pruebas, se podrá disponer de uno de ellos únicamente en las situaciones específicas que así lo requieran, debiendo ser el propio Ingeniero quien soluciones problemas menores en la instalación, como por ejemplo, reconfigurar el cableado o reajustar los parámetros de los mecanismos. Por otro lado, el material será también adelantado por la empresa para poder comenzar su programación y su puesta en marcha cuanto antes y previo pago del cliente, acelerando y facilitando todo el proceso.
 
 \subsection{Presupuesto}
 
-En esta sección se realizará un recuento del precio y las unidades de los mecanismos adquiridos e instalados en la vivienda. Pese a que, tanto el beneficio económico como el tiempo de programación se vean perjudicados al adquirir los mecanismos a diferentes proveedores, es necesario la conjugación de varios de ellos para lograr cumplir con las expectativas del cliente en cuanto al alcance de la instalación. Por tanto, se detallará también la empresa que proporciona los módulos:
+En esta sección se realizará un recuento del precio y las unidades de los mecanismos adquiridos e instalados en la vivienda. Pese a que, tanto el beneficio económico como el tiempo de programación se vean perjudicados al adquirir los mecanismos a diferentes proveedores \cite{Gira:2021} \cite{Zennio:2021}, es necesario la conjugación de varios de ellos para lograr cumplir con las expectativas del cliente en cuanto al alcance de la instalación. Por tanto, se detallará también la empresa que proporciona los módulos:
 
-\newpage
 \begin{flushleft}
 \begin{longtable}[H]{|c|p{4cm}|c|c|c|c|}
 \hline 
@@ -132,19 +130,6 @@ En esta sección se realizará un recuento del precio y las unidades de los meca
 \hline
 \hline
 \endhead
-\rule[0mm]{0mm}{4mm}
-18327 & Base de enchufe 16A/250V & Gira &  & 6,44 & 0\\
-\hline
-\rule[0mm]{0mm}{4mm}
-\multirow{2}{*}{25227} & Juego de juntas para  & \multirow{2}{*}{Gira} & \multirow{2}{*}{0} & \multirow{2}{*}{2,8} & \multirow{2}{*}{0}\\
- &  base de enchufe & & & &\\
-\hline
-\rule[0mm]{0mm}{4mm}
-245200 & ? & Gira &  &  & 0\\
-\hline
-\rule[0mm]{0mm}{4mm}
-27027 & ? & Gira &  &  & 0\\
-\hline
 \rule[0mm]{0mm}{4mm}
  \multirow{2}{*}{205127} & Detect. Movimiento  &  \multirow{2}{*}{Gira} &  \multirow{2}{*}{4} &  \multirow{2}{*}{169,67} &  \multirow{2}{*}{678,68}\\
  &  Komfort 2,2m KNX & & & &\\
@@ -193,7 +178,7 @@ En esta sección se realizará un recuento del precio y las unidades de los meca
  & 6 elementos 10-230 V CA/CC & & & &\\
 \hline
 \rule[0mm]{0mm}{4mm}
- & Detector de humos & Gira &  &  & 0\\
+ 233602& Detector de humos & Gira & 4 & 75 & 300\\
 \hline
 \rule[0mm]{0mm}{4mm}
 \multirow{2}{*}{234300} & Módulo KNX para  & \multirow{2}{*}{Gira} & \multirow{2}{*}{4} & \multirow{2}{*}{115,57} & \multirow{2}{*}{462,28}\\
@@ -204,24 +189,6 @@ En esta sección se realizará un recuento del precio y las unidades de los meca
 \hline
 \rule[0mm]{0mm}{4mm}
 206912 & Gira G1 & Gira & 1 & 1000,61 & 1000,61\\
-\hline
-\rule[0mm]{0mm}{4mm}
-21122 & Marco cubierta 1 elemento & Gira &  & 3,3 & 0\\
-\hline
-\rule[0mm]{0mm}{4mm}
-21222 & Marco cubierta 2 elemento & Gira &  & 4,54 & 0\\
-\hline
-\rule[0mm]{0mm}{4mm}
-21322 & Marco cubierta 3 elemento & Gira &  & 8,3 & 0\\
-\hline
-\rule[0mm]{0mm}{4mm}
-21422 & Marco cubierta 4 elemento & Gira &  & 13,4 & 0\\
-\hline
-\rule[0mm]{0mm}{4mm}
-40000 & ? & Gira &  &  & 0\\
-\hline
-\rule[0mm]{0mm}{4mm}
-27427 & ? & Gira &  &  & 0\\
 \hline
 \rule[0mm]{0mm}{4mm}
  \multirow{2}{*}{202500} & Actuador de regulacion KNX&  \multirow{2}{*}{Gira} &  \multirow{2}{*}{4} &  \multirow{2}{*}{529,2} &  \multirow{2}{*}{2116,8}\\
@@ -248,7 +215,7 @@ En esta sección se realizará un recuento del precio y las unidades de los meca
 \hline
 \hline
 \rule[0mm]{0mm}{4mm}
- & & & &TOTAL&12.459,56 €\\
+ & & & &TOTAL&12.759,56 €\\
 \hline 
 \caption{Presupuesto materiales}
 \label{tab:tabla_presupuesto_mat}
@@ -272,11 +239,11 @@ Ingeniero & Freedom & 1 & 1.712,42 & 2 meses & 3424,84\\
 \hline
 Licencia & KNX & 1 & 1000 & - & 1000\\
 \hline
-Material & Varios & 1 & 12,459,56 & - & 12,459,56\\
+Material & Varios & 1 & 12,759,56 & - & 12,459,56\\
 \hline
 \hline
 \rule[0mm]{0mm}{4mm}
- & & & &TOTAL&20398.80 €\\
+ & & & &TOTAL&20698.80 €\\
 \hline 
 \caption{Presupuesto}
 \label{tab:tabla_presupuesto}
