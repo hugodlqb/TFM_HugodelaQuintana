@@ -51,7 +51,7 @@ Por lo tanto, cada vez que por esa dirección de grupo se reciba un valor, este 
 
 \begin{figure}[H]
 \centering
-\includegraphics[width=1.15\textwidth]{figures/log_dimm_b21.png}  
+\includegraphics[width=1\textwidth]{figures/log_dimm_b21.png}  
 \caption{Módulo lógico DIMMER: bloque 1 (v2)}
 \label{fig:log_dimm_b21}
 \end{figure}
@@ -71,7 +71,7 @@ El control de la regulación tendrá como entrada el valor recibido tras una pul
 Por otro lado, es necesaria la creación de dos direcciones de grupo específicas, denominadas \textit{Estado X}, siendo X el código de la lámpara a controlar, e inicializadas con un valor inicial de 1 al arrancar el X1. La misión de esta variable interna del X1 es la de guardar el valor de la intensidad en una escala del 1 al 10. Tanto este valor acotado como el 10 enviado por el bloque “Generador de valores son enviados a un bloque “Multiplicación (x)”, siendo recibido el producto de ambas sobre un bloque “Salida” enlazado con la dirección de grupo del valor del dimmer. Esto permitirá regular la intensidad de la lámpara en saltos de 10 en 10 al ejecutar una pulsación larga sobre una de las teclas, al enviar ese valor como un dato de tipo porcentual a la luminaria.
 
 \begin{figure}[H]
-\includegraphics[width=1.15\textwidth]{figures/log_dimm_b23.png}  
+\includegraphics[width=1\textwidth]{figures/log_dimm_b23.png}  
 \caption{Módulo lógico DIMMER: bloque 3 (v2)}
 \label{fig:log_dimm_b23}
 \end{figure}
@@ -79,7 +79,7 @@ Por otro lado, es necesaria la creación de dos direcciones de grupo específica
 Con la intención de evitar que el valor de la intensidad se salga de los límites impuestos de 10 y 100 y el sistema pueda entrar en algún tipo de conflicto o error, se ha diseñado una lógica que se encargará de corregir esta situación (Imagen \ref{fig:log_dimm_b24}). Contará con la señal \textit{Estado X} como entrada, atacando dos bloques comparadores: un “Mayor (>)” con un valor de 10 y otro “Menor (<)” con valor de 1 como números contra los que confrontarse. En el caso de que alguno de los dos bloques recibieran una señal que cumpliesen su premisa, enviaría un pulso a un bloque “Generador de valores” con el mismo valor, un 1 ó un 10 respectivamente, que sería enviado al bloque de salida direccionado a la propia dirección \textit{Estado X}. En las ocasiones que esto ocurriese, \textit{Estado X} actualizaría su valor y desencadenaría la ejecución de la rutina explicada anteriormente en la Imagen \ref{fig:log_dimm_b23}.
 
 \begin{figure}[H]
-\includegraphics[width=1.05\textwidth]{figures/log_dimm_b24.png}  
+\includegraphics[width=1\textwidth]{figures/log_dimm_b24.png}  
 \caption{Módulo lógico DIMMER: bloque 4 (v2)}
 \label{fig:log_dimm_b24}
 \end{figure}
@@ -87,7 +87,7 @@ Con la intención de evitar que el valor de la intensidad se salga de los límit
 Por último, se crea un bloque lógico para gestionar el control del valor de la propia variable \textit{Estado X}. Haciendo uso de la salida uno de los bloques “Comparador” de valor 12 ó -12, se activará un bloque “Luz de escalera”, cuyo propósito es mantener el envío de una señal tipo pulso durante un tiempo determinado. Debido a que los pulsadores han sido programados para enviar los telegramas en ciclos de 1 segundo, este bloque se ha programado para realizar el flanco de bajada una vez trascurridos 3 segundos desde su último activación, reiniciando la cuenta atrás cada vez que uno de los bloques “Comparador” lo dispara. Su puerto de salida se encuentra conectado a un bloque “Filtro” programado para no realizar ninguna acción al recibir un 1, pero al recibir un 0, deberá lanzar una señal que irá conmutando su valor de manera automática.  
 
 \begin{figure}[H]
-\includegraphics[width=1.05\textwidth]{figures/log_dimm_b25.png}  
+\includegraphics[width=1\textwidth]{figures/log_dimm_b25.png}  
 \caption{Módulo lógico DIMMER: bloque 5 (v2)}
 \label{fig:log_dimm_b25}
 \end{figure}
@@ -104,7 +104,7 @@ Estos valores que conmutan irán conectados a dos bloques “Generadores de valo
 Estos valores 1 y -1 son enviados alternativamente cada vez que termina la cuenta atrás de 3 segundos a uno de los puertos de entrada de un bloque “Operaciones aritméticas básicas” programado como sumador. El otro puerto de entrada será la salida de un bloque “Generador de valores” cuyo valor será el de \textit{Estado X} y será disparado, una vez más, por el bloque comparador de 12 ó -12. El resultado de la suma (o la resta en el caso de -1) de estos valores dará como resultado el valor que tomará la dirección de grupo \textit{Estado X}, actualizando su valor para la ejecución del próximo ciclo en el que se vea requerida.
 
 \begin{figure}[H]
-\includegraphics[width=1.15\textwidth]{figures/log_dimm_b27.png}  
+\includegraphics[width=1\textwidth]{figures/log_dimm_b27.png}  
 \caption{Módulo lógico DIMMER: bloque 7 (v2)}
 \label{fig:log_dimm_b27}
 \end{figure}

@@ -18,7 +18,7 @@ Todos estos \textit {flags} pueden ser activados en todos y cada uno de los obje
 Si ahora se pulsase el pulsador P1, este escribiría un 1 en el objeto de comunicación textit {ON/OFF Luz Cocina}, lo que provocaría que el actuador cerrase el relé, permitiendo la circulación de la corriente y por tanto, el encendido de la bombilla. En ese momento, el objeto de comunicación textit {STD ON/OFF Luz Cocina} detecta el cambio de estado de la salida del actuador, y actualiza su valor a 1, volviendo a permitir que, no solo P1, si no también P2 y la pantalla, actualicen su estado y enciendan sus LEDs informativos y el icono cambiase a su representación de luz encendida. De esta manera el usuario es capaz de conocer el estado de un elemento de manera remota. Si ahora se diese el caso de que se pulsase el pulsador P2 o se actuase desde la pantalla, al conocer el estado en que se encuentra actualmente la luz, enviarán el valor contrario mediante una acción de textit {switch}, en este caso 0, volviendo a actuar sobre el actuador pero a la vez informando al resto de módulos del estado de ese elemento, tal y como sucedió al actuar sobre P1.
  \begin{center}
 \begin{figure}[H]
-\includegraphics[width=1.15\textwidth]{figures/diag_flags.png}   
+\includegraphics[width=1\textwidth]{figures/diag_flags.png}   
 \caption{Diagrama uso de flags}
 \label{fig:diag_flags}
 \end{figure}
@@ -182,7 +182,7 @@ Por otro lado, y en cuanto a la pulsación corta, si se da mientras no se esté 
  El diagrama de bloques diseñados en el módulo X1 es el siguiente:
 \begin{center}
 \begin{figure}[H]
-\includegraphics[width=1.05\textwidth]{figures/log_dimm_izq.png}   
+\includegraphics[width=1\textwidth]{figures/log_dimm_izq.png}   
 \caption{Módulo lógico DIMMER (1ª Parte)}
 \label{fig:log_dimm_izq}
 \end{figure}
@@ -190,7 +190,7 @@ Por otro lado, y en cuanto a la pulsación corta, si se da mientras no se esté 
 
 \begin{center}
 \begin{figure}[H]
-\includegraphics[width=1.05\textwidth]{figures/log_dimm_der.png}   
+\includegraphics[width=1\textwidth]{figures/log_dimm_der.png}   
 \caption{Módulo lógico DIMMER (2ª Parte)}
 \label{fig:log_dimm_der}
 \end{figure}
@@ -199,7 +199,7 @@ Por otro lado, y en cuanto a la pulsación corta, si se da mientras no se esté 
 En él podemos encontrar dos entradas de datos: la señal de ON/OFF de la luminaria y la orden de DIMMER, que atacarán a sus homologos de las salidas, una vez realizadas todas las secuencias del bloque lógico, que a continuación será descrito: por un lado, la señal de ON/OFF se envía a un bloque lógico capaz de diferir entre una pulsación larga de una corta, preestableciendo el valor que las diferencia durante su programación, en este caso, de un segundo. Este bloque ha sido programado para que únicamente se obtenga una señal de salida de valor “1” cuando la pulsación que es detectada es breve, y es enviada al disparador de un bloque Generador de valores. Este bloque tiene la función de que en el momento que recibe un “1” por su puerto “Disparador”, envía el valor recibido por su puerto “Valor”, que en este caso, es la propia señal de ON/OFF de la entrada. Este valor será recibido por un bloque de salida, que es el encargado de modificar el valor de la propia dirección de grupo ON/OFF de la lámpara.
 \begin{center}
 \begin{figure}[H]
-\includegraphics[width=1.15\textwidth]{figures/log_dimm_b1.png}   
+\includegraphics[width=1\textwidth]{figures/log_dimm_b1.png}   
 \caption{Módulo lógico DIMMER: bloque 1}
 \label{fig:log_dimm_b1}
 \end{figure}
@@ -209,7 +209,7 @@ A continuación, encontramos la segunda entrada, en este caso apuntando hacia la
 \\\\ Este valor será enviado a dos bloques Comparadores, uno programado para identificar unos y otro para nueves, cuyas salidas irán invertidas y direccionadas a la entrada de activación de un módulo de Bloqueo cada una. Estos módulos tienen un funcionamiento bastante sencillo e intuitivo: actúan como de buffer de datos, que entran por su puerto “Entrada”, siempre que reciban un “0” por su puerto “Activo”, puesto que si por el contrario reciben un “1”, bloquearan el envío de ese valor. 
  \begin{center}
 \begin{figure}[H]
-\includegraphics[width=1.15\textwidth]{figures/log_dimm_b2.png}   
+\includegraphics[width=1\textwidth]{figures/log_dimm_b2.png}   
 \caption{Módulo lógico DIMMER: bloque 2}
 \label{fig:log_dimm_b2}
 \end{figure}
@@ -217,7 +217,7 @@ A continuación, encontramos la segunda entrada, en este caso apuntando hacia la
 Por otro lado, los valores que se envían una vez que estos módulos de Bloqueo son desactivados provienen del tratamiento de la entrada ON/OFF. Esta señal en primer lugar pasará por un bloque lógico de Retardo ON/OFF, el cual permite seleccionar el tiempo de retardo del envío de las señales de ON/OFF, que en esta ocasión únicamente se ha establecido en 1 segundo para el ON, manteniendo el envío instantáneo para el OFF. A continuación, estos valores irán a la entrada de otro módulo de Bloqueo, cuya señal de activación es el valor invertido de la propia señal ON/OFF al pasar a través de un bloque Inversor, logrando así únicamente transmitir el “1” generado al activar la señal de ON/OFF, siendo este “1” las señales de entrada y valor a transmitir de los módulos de Bloqueo activados por los bloques Comparadores de unos y nueves mencionados anteriormente, cuya función era la de activarlos y desactivarlos. Una vez que estos bloques se encuentran desactivados y permiten el paso del valor, este se dirige a la entrada disparador de un Generador de señales, uno por cada módulo de Bloqueo, que transmitirán un uno o un nueve a la salida de DIMMING, según cuál de ellos sea activado.
  \begin{center}
 \begin{figure}[H]
-\includegraphics[width=1.15\textwidth]{figures/log_dimm_b3.png}   
+\includegraphics[width=1\textwidth]{figures/log_dimm_b3.png}   
 \caption{Módulo lógico DIMMER: bloque 3}
 \label{fig:log_dimm_b3}
 \end{figure}
@@ -225,7 +225,7 @@ Por otro lado, los valores que se envían una vez que estos módulos de Bloqueo 
 En último lugar, la señal de ON/OFF volverá a ser utilizada, siendo en primer lugar por un bloque Convertidor de tipo, configurado para obtener a su salida un valor binario de esta entrada. Una vez convertido, este valor pasará a un bloque Comparador programado para  contrastar si el valor recibido es un “0”, y enviar un “1” al puerto disparador de un bloque Generador de valores, que enviará un cero a la salida de DIMMING una vez se dispare. 
 \begin{figure}[H]
 \centering
-\includegraphics[width=1.08\textwidth]{figures/log_dimm_b4.png}   
+\includegraphics[width=1\textwidth]{figures/log_dimm_b4.png}   
 \caption{Módulo lógico DIMMER: bloque 4}
 \label{fig:log_dimm_b4}
 \end{figure}
@@ -247,7 +247,7 @@ Finalmente, la programación de una ventana o persiana controlada domóticamente
 
  \begin{center}
 \begin{figure}[H]
-\includegraphics[width=1.15\textwidth]{figures/prog_termost.png}   
+\includegraphics[width=1\textwidth]{figures/prog_termost.png}   
 \caption{Esquema conexionado sistema de climatización}
 \label{fig:prog_termost}
 \end{figure}
@@ -300,7 +300,7 @@ Para esta sección, al igual que sucedía con la programación de las luminarias
 En primer lugar aparecen las 5 señales de entrada que tendrán la capacidad de mantener el sistema recuperador encendido a la máxima potencia mientras se mantengan activas, más un tiempo añadido extra de 10 minutos. Estas señales se encuentran apuntando desde la dirección de grupo del ON/OFF de las cuatro luminarias situadas en los cuartos de baños, y desde la tecla de un pulsador que se encuentra instalado en uno de los pasillos. Todas ellas estarán direccionadas a los puertos “Entrada” de un bloque “Puerta OR”. La salida de este bloque se dirigirá hacia un bloque “Detector de flancos” programado para que su salida de detección de flanco descendente envié una señal a un bloque “Luz de escalera”, el cual tendrá la misión de mantener el envío de un 1 por su puerto “Salida” durante 10 minutos. Esta señal junto con un bloque “Entrada” activado al detectar más de 1500 ppm y la propia salida de la puerta OR, se dirigirán a un segundo bloque “Puerta OR”.
 \begin{figure}[H]
 \centering
-\includegraphics[width=1.15\textwidth]{figures/log_co2_b1.png}   
+\includegraphics[width=1\textwidth]{figures/log_co2_b1.png}   
 \caption{Módulo lógico Recuperador de CO\textsubscript{2}: bloque 1}
 \label{fig:log_co2_b1}
 \end{figure}
@@ -314,7 +314,7 @@ Con esto se logra que esta última puerta OR envíe un 1 a uno de los puertos �
 La misma puerta OR invertida se direccionará,  junto con la señal ON/FF del sistema y la de detección de 1000 ppm, a un bloque “Puerta AND” cuya salida se encuentra conectada a la dirección que conecta la velocidad media. Lo logrado con este bloque es que si la velocidad máxima se encuentra activada, no se podrá activar la velocidad media aunque se produzca la detección del límite de CO\textsubscript{2}.
 \begin{figure}[H]
 \centering
-\includegraphics[width=1.15\textwidth]{figures/log_co2_b3.png}   
+\includegraphics[width=1\textwidth]{figures/log_co2_b3.png}   
 \caption{Módulo lógico Recuperador de CO\textsubscript{2}: bloque 3}
 \label{fig:log_co2_b3}
 \end{figure}
@@ -322,7 +322,7 @@ En la Imagen \ref{fig:log_co2_b2} también se encuentra el bloque “Salida” q
 Con la intención de controlar el comportamiento del sistema a través de la pantalla o la aplicación móvil y no incurrir en ningún estado que pueda dañar el quipo, como la conexión simultanea de la velocidad media y alta, se han diseñado tres bloques lógicos. Su función será la de detectar cuando a una de estas salidas se le solicita su conexión, y por tanto, se deben desconectar las otras al detectar flancos ascendentes, por lo que se enviará el valor negado de estos bloques "Detector de flancos".
 \begin{figure}[H]
 \centering
-\includegraphics[width=1.05\textwidth]{figures/log_co2_b4.png}   
+\includegraphics[width=1\textwidth]{figures/log_co2_b4.png}   
 \caption{Módulo lógico Recuperador de CO\textsubscript{2}: bloque 4}
 \label{fig:log_co2_b4}
 \end{figure}
@@ -332,14 +332,14 @@ Con la intención de controlar el comportamiento del sistema a través de la pan
 El módulo lógico de esta sección comienza con un bloque “Entrada” por el cual se recibe el valor numérico del consumo seleccionado. Este valor se dirigirá a dos bloques “Convertidor de tipo”: el primero de ellos se encuentra programado para convertir el valor de consumo en un 1 si es valor es diferente de 0, y mantener su valor si es un 0. Este valor binario se encuentra direccionado al puerto “Disparador” de un bloque “Generador de valores”, cuyo puerto “Valor” estará predefinido con la unidad de medida de ese consumo mediante caracteres alfanuméricos que crean una variable de tipo \textit{string}. Finalmente, esta variable será enviada a un bloque de retardo programado para retener el envío de este parámetro al siguiente bloque durante 1 segundo.
 \begin{figure}[H]
 \centering
-\includegraphics[width=1.15\textwidth]{figures/log_consu_b1.png}   
+\includegraphics[width=1\textwidth]{figures/log_consu_b1.png}   
 \caption{Módulo lógico Control de consumos: bloque 1}
 \label{fig:log_consu_b1}
 \end{figure}
 El segundo bloque “Convertidor de tipo” anteriormente mencionado, que transforma el valor numérico de la medida en otra cadena de caracteres,  junto con el \textit{string} de la unidad de medida enviado con retraso, se dirigen hacia el puerto “Contenido” de un bloque lógico del tipo “Gira G1 notificaciones”, generándose una concatenación de ambos valores siguiendo la siguiente formula: \textit{string{valor numérico} +  string{unidad medida}}. Por último, este valor será enviado a un bloque “Salida” que ataca a la dirección de grupo encargada de mostrar en pantalla este valor cuando el usuario pulse el botón de refrescar estas medidas, que tendrá un bloque “Entrada” asociado que se encontrará direccionado al puerto “Disparador” del bloque generador de notificaciones.
 \begin{figure}[H]
 \centering
-\includegraphics[width=1.15\textwidth]{figures/log_consu_b2.png}   
+\includegraphics[width=1\textwidth]{figures/log_consu_b2.png}   
 \caption{Módulo lógico Control de consumos: bloque 2}
 \label{fig:log_consu_b2}
 \end{figure}
@@ -394,7 +394,7 @@ En primer lugar se ha creado una estructuración de la interfaz incluyendo todas
 Dentro de cada carpeta que representa a una habitación, el usuario podrá encontrar todos los dispositivos instalados en ella y pueden ser controlados mediante el sistema domótico. Para poder ejercer acciones sobre los mecanismos instalados, se ha diseñado una interfaz propia para cada uno de ellos, mostrando al usuario los principales parámetros que podrá controlar de forma cómoda y de manera remota desde cualquier pantalla, como por ejemplo, el porcentaje de intensidad en las luces regulados, la temperatura de consigna del termostato de una de las salas o el control del modo de clima mediante un botón virtual, eligiendo así que sistema de climatización comienza a funcionar, entre otras funcionalidades enfocadas al cumplimiento de los requisitos del cliente. 
 \begin{figure}[H]
 \centering
-\includegraphics[width=1.15\textwidth]{figures/prog_x1_4.png}   
+\includegraphics[width=1\textwidth]{figures/prog_x1_4.png}   
 \caption{Ejemplos de pantallas de control de elementos de la aplicación}
 \label{fig:prog_x1_4}
 \end{figure}
